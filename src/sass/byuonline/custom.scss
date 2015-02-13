@@ -1,6 +1,66 @@
+$largest_media_breakpoint: "screen and (min-width: 760px)";
 
-
+.bulleted-list ul,#feature .bulleted-list ul {
+	margin:auto;
+	margin-left: 1.75em;
+	padding: 0;
+}
 
 .bulleted-list ul > li {
 	list-style: disc;
+	line-height:1.5em;
 }
+
+@media #{$largest_media_breakpoint} {
+	#meeting-schedule {
+		text-align:center;
+	}
+	#meeting-schedule .schedules {
+		display:flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+	}
+	
+	#meeting-schedule > h2 {
+		text-align:left;
+	}
+	
+	#meeting-schedule > h2 > span {
+		font-size:1rem;
+	}
+	#meeting-schedule .schedules > div.day {
+		align-self: flex-start;
+		width:23%;
+		vertical-align: top;
+		text-align: left;
+		margin:0;
+		padding:0;	
+		
+		& h3 {
+			background-color: #151c46;
+			color: white;
+		}
+		& .calendar-item {
+			border: 1px solid #ccc;
+		}
+		
+		& .calendar-item, & h3 {
+			padding:0.25em;
+			margin:0;
+			
+			&:nth-child(even) {
+				/*background-color:#ccc;*/
+			}
+			&:nth-child(odd) {
+				/*background-color:#333;*/
+			}
+			& .time {
+				float: none;
+				display: block;
+				width: 100%;
+				text-align: left;
+			}
+		}
+	}	
+}
+

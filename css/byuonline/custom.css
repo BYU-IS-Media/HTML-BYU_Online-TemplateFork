@@ -1,4 +1,50 @@
+.bulleted-list ul, #feature .bulleted-list ul {
+  margin: auto;
+  margin-left: 1.75em;
+  padding: 0; }
+
 .bulleted-list ul > li {
-  list-style: disc; }
+  list-style: disc;
+  line-height: 1.5em; }
+
+@media screen and (min-width: 760px) {
+  #meeting-schedule {
+    text-align: center; }
+
+  #meeting-schedule .schedules {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; }
+
+  #meeting-schedule > h2 {
+    text-align: left; }
+
+  #meeting-schedule > h2 > span {
+    font-size: 1rem; }
+
+  #meeting-schedule .schedules > div.day {
+    align-self: flex-start;
+    width: 23%;
+    vertical-align: top;
+    text-align: left;
+    margin: 0;
+    padding: 0; }
+    #meeting-schedule .schedules > div.day h3 {
+      background-color: #151c46;
+      color: white; }
+    #meeting-schedule .schedules > div.day .calendar-item {
+      border: 1px solid #ccc; }
+    #meeting-schedule .schedules > div.day .calendar-item, #meeting-schedule .schedules > div.day h3 {
+      padding: 0.25em;
+      margin: 0; }
+      #meeting-schedule .schedules > div.day .calendar-item:nth-child(even), #meeting-schedule .schedules > div.day h3:nth-child(even) {
+        /*background-color:#ccc;*/ }
+      #meeting-schedule .schedules > div.day .calendar-item:nth-child(odd), #meeting-schedule .schedules > div.day h3:nth-child(odd) {
+        /*background-color:#333;*/ }
+      #meeting-schedule .schedules > div.day .calendar-item .time, #meeting-schedule .schedules > div.day h3 .time {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left; } }
 
 /*# sourceMappingURL=custom.css.map */

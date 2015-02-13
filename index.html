@@ -1,318 +1,323 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]>    <html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]>    <html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if IE 7]>		<html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>		<html lang="en" class="no-js oldie lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" class="no-js">
-  <!-- <![endif]-->
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>BYU - Sample 1</title>
-    <meta name="description" content="Description about your department.">
-    <meta name="author" content="Your Department Name">
-    <meta name="keywords" content="keyword 1, keyword 2, keyword 3">
-    <meta name="viewport" content="width=device-width, , initial-scale=1">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
-    <link rel="shortcut icon" href="favicon.ico">
-    <!-- Styles-->
-    <link rel="stylesheet" href="//cloud.typography.com/75214/740862/css/fonts.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/responsive.css" media="all and (min-width:16em)">
-    <link rel="stylesheet" href="css/byuonline/custom.css">
-    <!-- Scripts loaded via script loader. See notes in init.js file.-->
-    <script src="js/modernizr.js"></script>
-    <script>
-      var pageSettings = {
-       jQueryURL:     "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
-       jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
-       loadslider:    true, // Whether the image slider is present on the page
-       additionalScripts:   [], // Array of strings specifying URLs for additional scripts to load
-       gcse_search:    true, // Use the Google Custom Search Engine for the site's search?
-       gcse_search_id: '009932716493032633443:hlqjz33kfkc',  // Use this BYU GCSE id, or insert your own
-       analytics_key:  'UA-XXXXX-X' // Insert your Google Analytics key
-      }
-      
-      
-    </script>
-    <script src="js/init.js"></script>
-  </head>
-  <body>
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an<strong>outdated</strong>browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>or<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>to improve your experience.</p>
-    <![endif]-->
-    <header id="main-header" role="banner">
-      <div id="header-top" class="wrapper">
-        <div id="logo">
-          <h2><a href="http://www.byu.edu/" class="byu">Brigham Young University</a></h2>
-        </div>
-        <!-- This should link to your organization's home page-->
-        <h1><a id="site-name" href="/site/programs/byuonline" title="BYU Semester Online">BYU Online</a></h1><a href="http://home.byu.edu/home/cas" class="sign-in button">Sign in</a>
-      </div>
-    </header>
-    <div id="search-menu">
-      <div id="search-container" role="search">
-        <!--
-        The default search form, linking to BYU's search page. If a user does not have javascript enabled, they'll get this form.
-        If they have javascript, this content will be replaced with Google's custom search (from the script at the bottom of the page).
-        -->
-        <form id="basic-search" action="http://home.byu.edu/home/search" role="form">
-          <label for="search" class="visuallyhidden">Search</label>
-          <input id="search" type="search" name="search">
-          <input id="search-submit" type="submit" value="Search">
-        </form>
-        <!-- This container holds the Google custom search, if enabled-->
-        <div class="gcse-wrapper">
-          <gcse:search></gcse:search>
-        </div>
-      </div><a href="#primary-nav" class="menu-button">Menu</a>
-    </div>
-    <div id="content" role="main" class="wrapper clearfix ">
-      <div id="feature">
-        <!--Anything Slider
-        -->
-        <ul id="slider">
-          <li class="feature bulleted-list">
-            <div class="feature-image">
-            	<!-- <img src="images/slider/feature-main.jpg" alt="Featured image 1"/> -->
-            	<iframe width="699" height="393" src="https://www.youtube.com/embed/ym6Z8-hlhQc" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div data-background="#d1e4f6" data-shadow="#91b2d2" class="feature-description">
-              <h2>The Basics</h2>
-              <p>
-              	<ul>
-              		<li>Start and finish within the semester</li>
-              		<li>On-campus orientation first week of class</li>
-              		<li>Online coursework</li>
-              		<li>TA support</li>
-              		<li>No access to course until first day of class</li>
+	<!-- <![endif]-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>BYU - Sample 1</title>
+		<meta name="description" content="Description about your department.">
+		<meta name="author" content="Brigham Young University Online" />
+		<meta name="keywords" content="keyword 1, keyword 2, keyword 3">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- Styles-->
+		<link rel="stylesheet" href="//cloud.typography.com/75214/740862/css/fonts.css">
+		<link rel="stylesheet" href="css/base.css">
+		<!-- Scripts loaded via script loader. See notes in init.js file.-->
+		<script src="js/modernizr.js"></script>
+		<script>
+			var pageSettings = {
+			 jQueryURL:		 "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
+			 jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
+			 loadslider:		true, // Whether the image slider is present on the page
+			 additionalScripts:	 [], // Array of strings specifying URLs for additional scripts to load
+			 gcse_search:		true, // Use the Google Custom Search Engine for the site's search?
+			 gcse_search_id: '009932716493032633443:hlqjz33kfkc',	// Use this BYU GCSE id, or insert your own
+			 analytics_key:	'UA-2108793-1' // Insert your Google Analytics key
+			}
+			
+			
+		</script>
+		<script src="js/init.js"></script>
+		<link rel="stylesheet" href="css/byuonline/custom.css"  media="all and (min-width:160px)" />
+		<link rel="stylesheet" href="css/responsive.css" media="all and (min-width:16em)">
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an<strong>outdated</strong>browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>or<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>to improve your experience.</p>
+		<![endif]-->
+		<header id="main-header" role="banner">
+			<div id="header-top" class="wrapper">
+				<div id="logo">
+					<h2><a href="http://www.byu.edu/" class="byu">Brigham Young University</a></h2>
+				</div>
+				<!-- This should link to your organization's home page-->
+				<h1><a id="site-name" href="/site/programs/byuonline" title="BYU Semester Online">BYU Online</a></h1><!---	<a href="http://home.byu.edu/home/cas" class="sign-in button">Sign in</a>	--->
+			</div>
+		</header>
+		<div id="search-menu">
+			<div id="search-container" role="search">
+				<!--
+				The default search form, linking to BYU's search page. If a user does not have javascript enabled, they'll get this form.
+				If they have javascript, this content will be replaced with Google's custom search (from the script at the bottom of the page).
+				-->
+				<form id="basic-search" action="http://home.byu.edu/home/search" role="form">
+					<label for="search" class="visuallyhidden">Search</label>
+					<input id="search" type="search" name="search">
+					<input id="search-submit" type="submit" value="Search">
+				</form>
+				<!-- This container holds the Google custom search, if enabled-->
+				<div class="gcse-wrapper">
+					<gcse:search></gcse:search>
+				</div>
+			</div><a href="#primary-nav" class="menu-button">Menu</a>
+		</div>
+		<div id="content" role="main" class="wrapper clearfix ">
+			<div id="feature">
+				<!--Anything Slider
+				-->
+				<ul id="slider">
+					<li class="feature bulleted-list">
+						<div class="feature-image">
+							<!-- <img src="images/slider/feature-main.jpg" alt="Featured image 1"/> -->
+							<iframe width="699" height="393" src="https://www.youtube.com/embed/ym6Z8-hlhQc" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div data-background="#cee2ea" data-shadow="#cee2ea" class="feature-description">
+							<h2>The Basics</h2>
+						 	<ul>
+						 		<li>Start and finish within the semester</li>
+						 		<li>On-campus orientation first week of class</li>
+						 		<li>Online coursework</li>
+						 		<li>TA support</li>
+						 		<li>No access to course until first day of class</li>
+						 	</ul>
+						</div>
+					</li>
+					<!---
+					<li>
+						<div class="feature-image"><img src="" data-src="images/slider/feature-main.jpg" alt="Featured image 2"></div>
+						<div data-background="#339947" data-shadow="#006614" class="feature-description lightText">
+							<h2><a href="#">Slider Feature 2</a></h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+					</li>
+					<li>
+						<div class="feature-image"><img src="" data-src="images/slider/feature-main-3.jpg" alt="Featured image 3"></div>
+						<div data-background="#444" data-shadow="#111" class="feature-description lightText">
+							<h2><a href="#">Slider Feature 3</a></h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+					</li>
+					--->
 				</ul>
-              </p>
-            </div>
-          </li>
-          <li>
-            <div class="feature-image"><img src="" data-src="images/slider/feature-main.jpg" alt="Featured image 2"></div>
-            <div data-background="#339947" data-shadow="#006614" class="feature-description lightText">
-              <h2><a href="#">Slider Feature 2</a></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </li>
-          <li>
-            <div class="feature-image"><img src="" data-src="images/slider/feature-main-3.jpg" alt="Featured image 3"></div>
-            <div data-background="#444" data-shadow="#111" class="feature-description lightText">
-              <h2><a href="#">Slider Feature 3</a></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div id="calendar">
-        <h2>Calendar</h2>
-        <div class="day">
-          <h3><span class="date">24</span>Aug, Friday</h3>
-          <div class="calendar-item"><a href="http://calendar.byu.edu/calendar/2012-08-24#choral" title="Choral Auditions  @ BYU Campus - All Day">Choral Auditions</a><span class="time">All Day</span></div>
-          <div class="calendar-item"><a href="http://calendar.byu.edu/calendar/2012-08-24#newstudent" title="New Student Orientation  @ Various Campus Locations - 9:40 AM">New Student Orientation </a><span class="time">9:40 AM</span></div>
-        </div>
-        <div class="day">
-          <h3><span class="date">25</span>Aug, Saturday</h3>
-          <div class="calendar-item"><a href="http://calendar.byu.edu/calendar/2012-08-25#choral" title="Choral Auditions  @ BYU Campus - All Day ">Choral Auditions</a><span class="time">All Day</span></div>
-          <div class="calendar-item"><a href="http://calendar.byu.edu/calendar/2012-08-25#newstudent" title="New Student Orientation  @ Various Campus Locations - 9:00 AM">New Student Orientation </a><span class="time">9:00 AM</span></div>
-        </div>
-        <div class="day">
-          <h3><span class="date">27</span>Aug, Monday</h3>
-          <div class="calendar-item"><a href="http://calendar.byu.edu/calendar/2012-08-27" title="First Day of Fall Semester Classes  - All Day ">First Day of Fall Semester Classes </a><span class="time">All Day</span></div>
-        </div>
-        <div class="day">
-          <h3><span class="date">28</span>Aug, Tuesday</h3>
-          <div class="calendar-item"><a href="http://calendar.byu.edu/calendar/2012-08-28" title="Welcome Week 2012  @ Brigham Square - 12:00 PM ">Welcome Week 2012 </a><span class="time">12:00 PM</span></div>
-        </div>
-        <div class="day">
-          <h3><span class="date">29</span>Aug, Wednesday</h3>
-          <div class="calendar-item"><a href="http://calendar.byu.edu/calendar/2012-08-29" title="Welcome Week 2012  @ Brigham Square - 12:00 PM ">Welcome Week 2012 </a><span class="time">12:00 PM</span></div>
-        </div>
-        <ul id="calendars">
-          <li><a href="http://saas.byu.edu/calendar/">Academic Calendar</a></li>
-          <li><a href="http://arts.byu.edu/">Arts Events</a></li>
-          <li><a href="http://www.byucougars.com/schedule">Sports Schedules</a></li>
-        </ul><strong><a href="http://calendar.byu.edu/">Full Calendar</a></strong>
-      </div>
-      <div id="news">
-        <h2>News</h2>
-        <div id="news-container">
-          <div class="news-item"><img src="images/news/feature-1.jpg" alt="News feature 1 (REPLACE THIS WITH RELEVANT DESCRIPTIVE TEXT)">
-            <h3><a href="#">News 1</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="news-item omega"><img src="images/news/feature-2.jpg" alt="News feature 2 (REPLACE THIS WITH RELEVANT DESCRIPTIVE TEXT)">
-            <h3><a href="#">News 2</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div><strong><a href="#" class="baseline">Full News Page</a></strong>
-      </div>
-    </div>
-    <div class="nav-container">
-      <!-- Primary Nav-->
-      <nav id="primary-nav" role="navigation">
-        <ul>
-          <li> <a href="/site/programs/byuonline" class="single current">Home</a></li>
-          <li><a href="">Classes</a>
-            <div class="mega">
-              <ul class="links">
-                <li class="featured">
-                  <ul>
-                    <li><a href="">Featured Link 1</a></li>
-                    <li><a href="">Featured Link 2</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Menu item 1</a></li>
-                <li><a href="#">Menu item 2</a>
-                  <ul class="sublinks">
-                    <li><a href="">Submenu item 1</a></li>
-                    <li><a href="">Submenu item 2</a></li>
-                    <li><a href="">Submenu item 3</a></li>
-                  </ul>
-                </li>
-                <li><a href="">Menu item 3</a></li>
-                <li><a href="">Menu item 4</a></li>
-                <li><a href="">Menu item 5</a></li>
-                <li><a href="">Menu item 6</a></li>
-              </ul>
-              <div class="highlight"><a href="#"><img src="images/menu/menu1.jpg" alt="Menu image 1"></a>
-                <p><a href="#">Picture Link</a></p>
-                <p>Text text text text text.</p>
-              </div>
-              <div class="highlight"><a href="#"><img src="images/menu/menu2.jpg" alt="Menu image 2"></a>
-                <p><a href="#">Picture Link</a></p>
-                <p>Text text text text text.</p>
-              </div>
-            </div>
-          </li>
-          <li><a href="">FAQ</a>
-            <div class="mega">
-              <ul class="links double">
-                <li class="featured">
-                  <ul>
-                    <li><a href="">Featured Link 1</a></li>
-                    <li><a href="">Featured Link 2</a></li>
-                  </ul>
-                </li>
-                <li class="left">
-                  <ul>
-                    <li><a href="#">Menu item 1</a></li>
-                    <li><a href="#">Menu item 2</a>
-                      <ul class="sublinks">
-                        <li><a href="">Submenu item 1</a></li>
-                        <li><a href="">Submenu item 2</a></li>
-                        <li><a href="">Submenu item 3</a></li>
-                        <li><a href="">Submenu item 4</a></li>
-                        <li><a href="">Submenu item 5</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="">Menu item 3</a></li>
-                    <li><a href="">Menu item 4</a></li>
-                    <li><a href="">Menu item 5</a></li>
-                    <li><a href="">Menu item 6</a></li>
-                  </ul>
-                </li>
-                <li class="left">
-                  <ul>
-                    <li><a href="">Menu item 7</a></li>
-                    <li><a href="">Menu item 8</a></li>
-                    <li><a href="">Menu item 9</a></li>
-                    <li><a href="">Menu item 10</a></li>
-                    <li><a href="">Menu item 11</a></li>
-                    <li><a href="">Menu item 12</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <div class="highlight"><a href="#"><img src="images/menu/menu1.jpg" alt="Menu image 3"></a>
-                <p><a href="#">Picture Link</a></p>
-                <p>Text text text text text.</p>
-              </div>
-              <div class="highlight"><a href="#"><img src="images/menu/menu2.jpg" alt="Menu image 4"></a>
-                <p><a href="#">Picture Link</a></p>
-                <p>Text text text text text.</p>
-              </div>
-            </div>
-          </li>
-          <li><a href="">Help</a>
-            <div class="sub">
-              <ul class="links">
-                <li><a href="">Menu item 1</a></li>
-                <li><a href="">Menu item 2</a></li>
-                <li><a href="">Menu item 3</a></li>
-                <li><a href="">Menu item 4</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="http://byuonline.brainhoney.com" class="single">BrainHoney</a></li>
-        </ul>
-      </nav>
-      <!-- Secondary Nav-- >
-      <nav id="secondary-nav" role="navigation">
-        <ul>
-          <li><a href="#">SecMenu1</a>
-            <ul class="sub">
-              <li><a href="">Menu item 1</a></li>
-              <li><a href="">Menu item 2</a></li>
-              <li><a href="">Menu item 3</a></li>
-              <li><a href="">Menu item 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#">SecMenu2</a>
-            <ul class="sub">
-              <li><a href="">Menu item 1</a></li>
-              <li><a href="">Menu item 2</a></li>
-              <li><a href="">Menu item 3</a></li>
-              <li><a href="">Menu item 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#">SecMenu3</a>
-            <ul class="sub">
-              <li><a href="">Menu item 1</a></li>
-              <li><a href="">Menu item 2</a></li>
-              <li><a href="">Menu item 3</a></li>
-              <li><a href="">Menu item 4</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav> -->
-    </div>
-    <footer id="page-footer" role="contentinfo">
-      <div id="footer-links">
-        <div class="wrapper">
-          <div class="col alpha">
-            <h2>Footer Column 1</h2><a href="">Menu item 1</a><a href="">Menu item 2</a><a href="">Menu item 3</a><a href="">Menu item 4</a>
-          </div>
-          <div class="col">
-            <h2>Footer Column 2</h2><a href="">Menu item 1</a><a href="">Menu item 2</a><a href="">Menu item 3</a><a href="">Menu item 4</a>
-          </div>
-          <div class="col double">
-            <h2>Footer Double Column</h2>
-            <div class="left alpha"><a href="">Left Link 1</a><a href="">Left Link 2</a><a href="">Left Link 3</a><a href="">Left Link 4</a>
-            </div>
-            <div class="right omega"><a href="">Right Link 1</a><a href="">Right Link 2</a><a href="">Right Link 3</a><a href="">Right Link 4</a>
-            </div>
-          </div>
-          <div class="col omega">
-            <h2>Footer Column 4</h2><a href="">Menu item 1</a><a href="">Menu item 2</a><a href="">Menu item 3</a><a href="">Menu item 4</a>
-          </div>
-        </div>
-      </div>
-      <div id="footer-bottom">
-        <div class="wrapper clearfix">
-          <!--a#byu(href='http://byu.edu/') Brigham Young University--><a id="byui" href="http://byui.edu/" class="ir">BYU-Idaho</a><a id="byuh" href="http://byuh.edu/" class="ir">BYU-Hawaii</a><a id="ldsbc" href="http://www.ldsbc.edu/" class="ir">LDS Business College</a><a id="lds" href="http://lds.org/">The Church of Jesus Christ of Latter-day Saints</a>
-        </div>
-      </div>
-    </footer>
-    <!--CONTENT END
-    -->
-    <script>
-      /* Google Analytics: change UA-XXXXX-X to be your site's ID. */
-      var _gaq=[['_setAccount', pageSettings.google_analytics_key],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-  </body>
+			</div>
+			<div id="topic-search">
+				<h2>Welcome</h2>
+			</div>
+			<div id="meeting-schedule">
+				<h2>Mandatory Orientation Meeting Schedule <span><a href="">Why must I attend?</a></span></h2>
+				<div class="schedules">
+					<div class="day">
+						<h3>Monday, January <span class="date">5</span></h3>
+						<div class="calendar-item">EXSC 221<span class="time">9:00-10:00 AM</span>1300 JKB</div>
+						<div class="calendar-item">HLTH 335<span class="time">9:00-10:00 AM</span>2200 JKB</div>
+						<div class="calendar-item">IHUM 202<span class="time">1:00-2:00 PM</span>350 SWKT</div>
+						<div class="calendar-item">M COM 320<span class="time">2:00-3:00 PM</span>170 JKHB</div>
+					</div>
+					<div class="day">
+						<h3>Tuesday, January <span class="date">6</span></h3>
+						<div class="calendar-item">NDFS 100<span class="time">9:00-10:00 AM</span>1300 JKB</div>
+						<div class="calendar-item">PDBIO 210<span class="time">9:00-10:00 AM</span>2200 JKB</div>
+						<div class="calendar-item">PHSCS 127<span class="time">1:00-2:00 PM</span>350 SWKT</div>
+					</div>
+					<div class="day">
+						<h3>Wednesday, January <span class="date">7</span></h3>
+						<div class="calendar-item">PSYCH 111<span class="time">9:00-10:00 AM</span>1300 JKB</div>
+						<div class="calendar-item">REL A 212<span class="time">9:00-10:00 AM</span>2200 JKB</div>
+						<div class="calendar-item">REL C 324<span class="time">1:00-2:00 PM</span>350 SWKT</div>
+						<div class="calendar-item">REL C 333<span class="time">2:00-3:00 PM</span>170 JKHB</div>
+					</div>
+					<div class="day">
+						<h3>Thursday, January <span class="date">8</span></h3>
+						<div class="calendar-item">SFL 160<span class="time">9:00-10:00 AM</span>1300 JKB</div>
+						<div class="calendar-item">SFL 260<span class="time">9:00-10:00 AM</span>2200 JKB</div>
+						<div class="calendar-item">SOC 111<span class="time">9:00-10:00 AM</span>2200 JKB</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav-container">
+			<!-- Primary Nav-->
+			<nav id="primary-nav" role="navigation">
+				<ul>
+					<li> <a href="/site/programs/byuonline" class="single current">Home</a></li>
+					<li><a href="">Classes</a>
+						<div class="mega">
+							<ul class="links">
+								<li class="featured">
+									<ul>
+										<li><a href="">Featured Link 1</a></li>
+										<li><a href="">Featured Link 2</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Menu item 1</a></li>
+								<li><a href="#">Menu item 2</a>
+									<ul class="sublinks">
+										<li><a href="">Submenu item 1</a></li>
+										<li><a href="">Submenu item 2</a></li>
+										<li><a href="">Submenu item 3</a></li>
+									</ul>
+								</li>
+								<li><a href="">Menu item 3</a></li>
+								<li><a href="">Menu item 4</a></li>
+								<li><a href="">Menu item 5</a></li>
+								<li><a href="">Menu item 6</a></li>
+							</ul>
+							<div class="highlight"><a href="#"><img src="images/menu/menu1.jpg" alt="Menu image 1"></a>
+								<p><a href="#">Picture Link</a></p>
+								<p>Text text text text text.</p>
+							</div>
+							<div class="highlight"><a href="#"><img src="images/menu/menu2.jpg" alt="Menu image 2"></a>
+								<p><a href="#">Picture Link</a></p>
+								<p>Text text text text text.</p>
+							</div>
+						</div>
+					</li>
+					<li><a href="">FAQ</a>
+						<div class="mega">
+							<ul class="links double">
+								<li class="featured">
+									<ul>
+										<li><a href="">Featured Link 1</a></li>
+										<li><a href="">Featured Link 2</a></li>
+									</ul>
+								</li>
+								<li class="left">
+									<ul>
+										<li><a href="#">Menu item 1</a></li>
+										<li><a href="#">Menu item 2</a>
+											<ul class="sublinks">
+												<li><a href="">Submenu item 1</a></li>
+												<li><a href="">Submenu item 2</a></li>
+												<li><a href="">Submenu item 3</a></li>
+												<li><a href="">Submenu item 4</a></li>
+												<li><a href="">Submenu item 5</a></li>
+											</ul>
+										</li>
+										<li><a href="">Menu item 3</a></li>
+										<li><a href="">Menu item 4</a></li>
+										<li><a href="">Menu item 5</a></li>
+										<li><a href="">Menu item 6</a></li>
+									</ul>
+								</li>
+								<li class="left">
+									<ul>
+										<li><a href="">Menu item 7</a></li>
+										<li><a href="">Menu item 8</a></li>
+										<li><a href="">Menu item 9</a></li>
+										<li><a href="">Menu item 10</a></li>
+										<li><a href="">Menu item 11</a></li>
+										<li><a href="">Menu item 12</a></li>
+									</ul>
+								</li>
+							</ul>
+							<div class="highlight"><a href="#"><img src="images/menu/menu1.jpg" alt="Menu image 3"></a>
+								<p><a href="#">Picture Link</a></p>
+								<p>Text text text text text.</p>
+							</div>
+							<div class="highlight"><a href="#"><img src="images/menu/menu2.jpg" alt="Menu image 4"></a>
+								<p><a href="#">Picture Link</a></p>
+								<p>Text text text text text.</p>
+							</div>
+						</div>
+					</li>
+					<li><a href="">Help</a>
+						<div class="sub">
+							<ul class="links">
+								<li><a href="">Menu item 1</a></li>
+								<li><a href="">Menu item 2</a></li>
+								<li><a href="">Menu item 3</a></li>
+								<li><a href="">Menu item 4</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="http://byuonline.brainhoney.com" class="single">BrainHoney</a></li>
+				</ul>
+			</nav>
+			<!-- Secondary Nav-- >
+			<nav id="secondary-nav" role="navigation">
+				<ul>
+					<li><a href="#">SecMenu1</a>
+						<ul class="sub">
+							<li><a href="">Menu item 1</a></li>
+							<li><a href="">Menu item 2</a></li>
+							<li><a href="">Menu item 3</a></li>
+							<li><a href="">Menu item 4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">SecMenu2</a>
+						<ul class="sub">
+							<li><a href="">Menu item 1</a></li>
+							<li><a href="">Menu item 2</a></li>
+							<li><a href="">Menu item 3</a></li>
+							<li><a href="">Menu item 4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">SecMenu3</a>
+						<ul class="sub">
+							<li><a href="">Menu item 1</a></li>
+							<li><a href="">Menu item 2</a></li>
+							<li><a href="">Menu item 3</a></li>
+							<li><a href="">Menu item 4</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav> -->
+		</div>
+		<footer id="page-footer" role="contentinfo">
+			<div id="footer-links">
+				<div class="wrapper">
+					<div class="col alpha double">
+						<h2>Customer Support</h2>
+							Phone hours: M-F from 8 a.m. &mdash; 6 p.m. (MST)<br/>
+							Phone: 1-800-914-8931 or 1-801-422-2868<br/>
+							Fax: 1-801-422-0102
+					</div>
+					<div class="col double">
+						<h2>Technical Support</h2>
+							Phone hours: M-F from 8 a.m. &mdash; 6 p.m. (MST)<br/>
+							Phone: 1-877-897-8085 or 1-801-422-8524
+					</div>
+					<div class="col omega">
+						<h2>Follow</h2>
+							<a href="http://facebook.com/BYUIS">facebook.com/BYUIS</a>
+							<a href="http://twitter.com/BYU_IS_Online">twitter.com/BYU_IS_Online</a>
+							<a href="http://youtube.com/BYUOnline">youtube.com/BYUOnline</a>
+							<a href="http://plus.google.com/BYUIS">plus.google.com/BYUIS</a>
+						<h2>Share</h2>
+							<a href="">facebook.com</a>
+							<a href="">twitter.com</a>
+							<a href="">plus.google.com</a>
+					</div>
+				</div>
+			</div>
+			<div id="footer-bottom">
+				<div class="wrapper clearfix">
+					<!--a#byu(href='http://byu.edu/') Brigham Young University-->
+					<a id="byu" href="http://byu.edu/" class="ir">BYU</a>
+					<a id="ce" href="http://ce.byu.edu/" class="ir">Continuing<br/>Education</a>
+					<!--
+					<a id="byui" href="http://byui.edu/" class="ir">BYU-Idaho</a>
+					<a id="byuh" href="http://byuh.edu/" class="ir">BYU-Hawaii</a>
+					<a id="ldsbc" href="http://www.ldsbc.edu/" class="ir">LDS Business College</a>
+					<a id="lds" href="http://lds.org/">The Church of Jesus Christ of Latter-day Saints</a>
+					-->
+				</div>
+			</div>
+		</footer>
+		<!--CONTENT END
+		-->
+		<script>
+			/* Google Analytics: change UA-XXXXX-X to be your site's ID. */
+			var _gaq=[['_setAccount', pageSettings.google_analytics_key],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+	</body>
 </html>
