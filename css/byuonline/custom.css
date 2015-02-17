@@ -7,7 +7,34 @@
   list-style: disc;
   line-height: 1.5em; }
 
-@media screen and (min-width: 760px) {
+.tutorial-video-container {
+  width: 95%;
+  display: inline-block;
+  margin: 1rem; }
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0; }
+
+.videoWrapper object,
+.videoWrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+@media screen and (min-width: 850px) {
   #meeting-schedule {
     text-align: center; }
 
@@ -45,6 +72,9 @@
         float: none;
         display: block;
         width: 100%;
-        text-align: left; } }
+        text-align: left; }
+
+  .tutorial-video-container {
+    width: 45%; } }
 
 /*# sourceMappingURL=custom.css.map */
