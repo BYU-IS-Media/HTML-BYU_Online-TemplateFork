@@ -3,7 +3,7 @@
 		$("a.info-link").on("click",function( e ) {
 			var $this = $(this),
 				$parent = $this.parent().parent(),
-				$info = $parent.find(".course-descriptive")
+				$info = $parent.find(".course-descriptive, .answer")
 			;
 			if($info.hasClass("selected")) {
 				$info.removeClass("selected");
