@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>		<html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>		<html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+	<!-- <![endif]-->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="noindex">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>BYU Online - Classes</title>
+		<meta name="description" content="Description about your department.">
+		<meta name="author" content="Brigham Young University Online" />
+		<meta name="keywords" content="keyword 1, keyword 2, keyword 3">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- Styles-->
+		<link rel="stylesheet" href="//cloud.typography.com/75214/740862/css/fonts.css">
+		<link rel="stylesheet" href="css/base.css">
+		<!-- Scripts loaded via script loader. See notes in init.js file.-->
+		<script src="js/modernizr.js"></script>
+		<script>
+			var pageSettings = {
+			 jQueryURL:		 "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
+			 jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
+			 loadslider:		true, // Whether the image slider is present on the page
+			 additionalScripts:	 ["js/custom.js"], // Array of strings specifying URLs for additional scripts to load
+			 gcse_search:		true, // Use the Google Custom Search Engine for the site's search?
+			 gcse_search_id: '009932716493032633443:hlqjz33kfkc',	// Use this BYU GCSE id, or insert your own
+			 analytics_key:	'UA-2108793-1' // Insert your Google Analytics key
+			}
+			
+			
+		</script>
+		<script src="js/init.js"></script>
+		<link rel="stylesheet" href="css/byuonline/custom.css"  media="all and (min-width:160px)" />
+		<link rel="stylesheet" href="css/responsive.css" media="all and (min-width:16em)">
+		<style>
+			#class-list li {
+				margin-top:0.25rem;
+				margin-bottom:0.5rem;
+			}
+			.course-descriptive {
+				display:block;
+				height:0;
+				overflow:hidden;
+			}
+			.course-descriptive.selected {
+				display:block;
+				height:auto;
+				overflow:hidden;
+			}
+			.instructor-name:before {
+				content:"Instructor: ";
+				display:inline;
+			}
+			.instructor-email:before {
+				content:"Instructor Email: ";
+				display:inline;
+			}
+			.ta-name:before {
+				content:"TA: ";
+				display:inline;
+			}
+			.ta-email:before {
+				content:"TA Email: ";
+				display:inline;
+			}
+		</style>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an<strong>outdated</strong>browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>or<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>to improve your experience.</p>
+		<![endif]-->
+		<header id="main-header" role="banner">
+			<div id="header-top" class="wrapper">
+				<div id="logo">
+					<h2><a href="http://www.byu.edu/" class="byu">Brigham Young University</a></h2>
+				</div>
+				<!-- This should link to your organization's home page-->
+				<h1><a id="site-name" href="/site/programs/byuonline" title="BYU Semester Online">BYU Online</a></h1><!---	<a href="http://home.byu.edu/home/cas" class="sign-in button">Sign in</a>	--->
+			</div>
+		</header>
+		<div id="search-menu">
+			<div id="search-container" role="search">
+				<!--
+				The default search form, linking to BYU's search page. If a user does not have javascript enabled, they'll get this form.
+				If they have javascript, this content will be replaced with Google's custom search (from the script at the bottom of the page).
+				-->
+				<form id="basic-search" action="http://home.byu.edu/home/search" role="form">
+					<label for="search" class="visuallyhidden">Search</label>
+					<input id="search" type="search" name="search">
+					<input id="search-submit" type="submit" value="Search">
+				</form>
+				<!-- This container holds the Google custom search, if enabled-->
+				<div class="gcse-wrapper">
+					<gcse:search></gcse:search>
+				</div>
+			</div><a href="#primary-nav" class="menu-button">Menu</a>
+		</div>
+		<div id="content" role="main" class="wrapper clearfix ">
+			<div id="main-heading">
+				<h2>BYU Online Classes</h2>
+			</div>
+			<div id="class-list">
+				<ul>
+					<li>
+						<div class="course-title">
+							EXSC 221		Exercise Science
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">LeCheminant, James</div>
+							<div class="instructor-email">james_lecheminant@byu.edu</div>
+							<div class="ta-name">Eric Turner</div>
+							<div class="ta-email">ta_exsc221_2@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							EXSC 221		Exercise Science
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Barbara Lockhart</div>
+							<div class="instructor-email">barbara_lockhart@byu.edu</div>
+							<div class="ta-name">Eric Turner</div>
+							<div class="ta-email">ta_exsc221_2@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							EXSC 221		Exercise Science
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Ronald Hager</div>
+							<div class="instructor-email">hager@byu.edu</div>
+							<div class="ta-name">Joel Buss </div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							EXSC 221		Exercise Science
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Mitchell, Ulrike</div>
+							<div class="instructor-email">rike@byu.edu</div>
+							<div class="ta-name">Joel Buss</div>
+							<div class="ta-email">ta_exsc221_2@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							HLTH 335		Health Behavior Change
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Josh West</div>
+							<div class="instructor-email">josh.west@byu.edu</div>
+							<div class="ta-name">Calvin Jahng</div>
+							<div class="ta-email">ta_hlth335@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							IHUM 202		Western Humanities
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Rob Colson</div>
+							<div class="instructor-email">robert_colson@byu.edu</div>
+							<div class="ta-name">Harrison Montague</div>
+							<div class="ta-email">ta1_ihum202@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							M COM 320		Communication in Organization Settings
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Crickett Willardsen</div>
+							<div class="instructor-email">crwill@comcast.net</div>
+							<div class="ta-name">Reese haydon</div>
+							<div class="ta-email">ta_mcom320@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							NDFS 100		Essentials of Nutrition
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">TBD</div>
+							<div class="ta-name">Kylie Peterson</div>
+							<div class="ta-email">ta_ndfs100@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							PDBIO 210		Human Anantomy
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Michael Stark</div>
+							<div class="instructor-email">michael_stark@byu.edu</div>
+							<div class="ta-name">David Skanchy</div>
+							<div class="ta-email">ta_pdbio210@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							PHSCS 127		Descriptive Astronomy
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Mike Joner</div>
+							<div class="instructor-email">not listed</div>
+							<div class="ta-name">Carla Carroll</div>
+							<div class="ta-email">ta_physics105@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							PSYCH 111		General Psychology
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Ross Flom</div>
+							<div class="instructor-email">ross_flom@byu.edu</div>
+							<div class="ta-name">Isaac Sheffield</div>
+							<div class="ta-email">ta_psych111@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							REL A 212		The New Testament
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Thomas Wayment</div>
+							<div class="instructor-email">thomas_wayment@byu.edu</div>
+							<div class="ta-name">Lynn Mulkern</div>
+							<div class="ta-email">ta_rela212@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							REL C 324		The Doctrine and Covenants
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Craig Manscill</div>
+							<div class="instructor-email">craig_manscill@byu.edu</div>
+							<div class="ta-name">Joseph Mohrman</div>
+							<div class="ta-email">ta_relc324@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							REL C 333		The Living Prophets
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Robert Freeman</div>
+							<div class="instructor-email">robert_freeman@byu.edu</div>
+							<div class="ta-name">Alan Hickey</div>
+							<div class="ta-email">ta_relc333@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							SFL 160		Introduction to Family Processes
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Brian Willoughby</div>
+							<div class="instructor-email">brian.willoughby@byu.edu</div>
+							<div class="ta-name">Sarah Shepard</div>
+							<div class="ta-email">ta_sfl160@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							SFL 260		Family Finance
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Jeff Hill</div>
+							<div class="instructor-email">jeff_hill@byu.edu</div>
+							<div class="ta-name">Melissa Bennett</div>
+							<div class="ta-email">ta_sfl260@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							SOC 111		Introductory Sociology
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Alice Lapray</div>
+							<div class="instructor-email">not listed</div>
+							<div class="ta-name">Jason Searle</div>
+							<div class="ta-email">ta_soc111@byu.edu</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							STDEV 150		Public Speaking
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Wilkinson, Ron</div>
+							rdw37@earthlink.net
+							<div class="ta-name">No TA for this course</div>
+						</div>
+					</li>
+					<li>
+						<div class="course-title">
+							STDEV 150		Public Speaking
+							<a class="info-link" href="javascript:void(0);">Info</a>
+						</div>
+						<div class="course-descriptive">
+							<div class="instructor-name">Stephanie Freeman</div>
+							<div class="instructor-email">publicspeaking@byu.edu</div>
+							<div class="ta-name">No TA for this course</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav-container">
+			<!-- Primary Nav-->
+			<nav id="primary-nav" role="navigation">
+				<ul>
+					<li><a href="index.html" class="single">Home</a></li>
+					<li><a href="Classes.html" class="single current">Classes</a></li>
+					<li><a href="FAQ.html" class="single">FAQ</a></li>
+					<li><a href="Help.html" class="single">Help</a></li>
+					<li><a href="http://byuonline.brainhoney.com" class="single">BrainHoney</a></li>
+				</ul>
+			</nav>
+			<!-- Secondary Nav-- >
+			<nav id="secondary-nav" role="navigation">
+				<ul>
+					<li><a href="#">SecMenu1</a>
+						<ul class="sub">
+							<li><a href="">Menu item 1</a></li>
+							<li><a href="">Menu item 2</a></li>
+							<li><a href="">Menu item 3</a></li>
+							<li><a href="">Menu item 4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">SecMenu2</a>
+						<ul class="sub">
+							<li><a href="">Menu item 1</a></li>
+							<li><a href="">Menu item 2</a></li>
+							<li><a href="">Menu item 3</a></li>
+							<li><a href="">Menu item 4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">SecMenu3</a>
+						<ul class="sub">
+							<li><a href="">Menu item 1</a></li>
+							<li><a href="">Menu item 2</a></li>
+							<li><a href="">Menu item 3</a></li>
+							<li><a href="">Menu item 4</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav> -->
+		</div>
+		<footer id="page-footer" role="contentinfo">
+			<div id="footer-links">
+				<div class="wrapper">
+					<div class="col alpha double">
+						<h2>Customer Support</h2>
+							Phone hours: M-F from 8 a.m. &mdash; 6 p.m. (MST)<br/>
+							Phone: 1-800-914-8931 or 1-801-422-2868<br/>
+							Fax: 1-801-422-0102
+					</div>
+					<div class="col double">
+						<h2>Technical Support</h2>
+							Phone hours: M-F from 8 a.m. &mdash; 6 p.m. (MST)<br/>
+							Phone: 1-877-897-8085 or 1-801-422-8524
+					</div>
+					<div class="col omega">
+						<h2>Follow</h2>
+							<a href="http://facebook.com/BYUIS">facebook.com/BYUIS</a>
+							<a href="http://twitter.com/BYU_IS_Online">twitter.com/BYU_IS_Online</a>
+							<a href="http://youtube.com/BYUOnline">youtube.com/BYUOnline</a>
+							<a href="http://plus.google.com/BYUIS">plus.google.com/BYUIS</a>
+						<h2>Share</h2>
+							<a href="">facebook.com</a>
+							<a href="">twitter.com</a>
+							<a href="">plus.google.com</a>
+					</div>
+				</div>
+			</div>
+			<div id="footer-bottom">
+				<div class="wrapper clearfix">
+					<!--a#byu(href='http://byu.edu/') Brigham Young University-->
+					<a id="byu" href="http://byu.edu/" class="ir">BYU</a>
+					<a id="ce" href="http://ce.byu.edu/" class="ir">Continuing<br/>Education</a>
+					<!--
+					<a id="byui" href="http://byui.edu/" class="ir">BYU-Idaho</a>
+					<a id="byuh" href="http://byuh.edu/" class="ir">BYU-Hawaii</a>
+					<a id="ldsbc" href="http://www.ldsbc.edu/" class="ir">LDS Business College</a>
+					<a id="lds" href="http://lds.org/">The Church of Jesus Christ of Latter-day Saints</a>
+					-->
+				</div>
+			</div>
+		</footer>
+		<!--CONTENT END
+		-->
+		<script>
+			/* Google Analytics: change UA-XXXXX-X to be your site's ID. */
+			var _gaq=[['_setAccount', pageSettings.google_analytics_key],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+	</body>
+</html>
