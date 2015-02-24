@@ -26,7 +26,7 @@
 			 jQueryURL:		 "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
 			 jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
 			 loadslider:		true, // Whether the image slider is present on the page
-			 additionalScripts:	 [], // Array of strings specifying URLs for additional scripts to load
+			 additionalScripts:	 ["vendor/jquery.bxslider/jquery.bxslider.min.js","js/custom.js"], // Array of strings specifying URLs for additional scripts to load
 			 gcse_search:		true, // Use the Google Custom Search Engine for the site's search?
 			 gcse_search_id: '009932716493032633443:hlqjz33kfkc',	// Use this BYU GCSE id, or insert your own
 			 analytics_key:	'UA-2108793-1' // Insert your Google Analytics key
@@ -37,6 +37,33 @@
 		<script src="js/init.js"></script>
 		<link rel="stylesheet" href="css/byuonline/custom.css"  media="all and (min-width:160px)" />
 		<link rel="stylesheet" href="css/responsive.css" media="all and (min-width:16em)">
+		<style>
+		.ta-support-list div {
+			margin:0.5rem;
+			display:inline-block;
+			width: 10rem;
+			padding:0.75rem;
+		}
+		.ta-support-list div h4 {
+			margin:0;
+			padding:-.75rem;
+		}
+		.ta-support-list div tel {
+			display:block;
+		}
+		.ta-support-list div:nth-child(odd) {
+			background-color:#f3f3f3;
+		}
+		.ta-support-list div:nth-child(even) {
+			background-color:#E0E0E0;
+		}
+		
+		.bx-wrapper .bx-caption {
+			text-align:left;
+		}
+		</style>
+		<link rel="stylesheet" href="vendor/jquery.bxslider/jquery.bxslider.css">
+		
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -69,6 +96,50 @@
 			</div><a href="#primary-nav" class="menu-button">Menu</a>
 		</div>
 		<div id="content" role="main" class="wrapper clearfix ">
+			<h2>Adobe Connect</h2>
+			<div class="bxslider-wrapper">
+				<ul class="bxslider">
+					<li><img src="help_files/1Login.JPG" title="Go to byuconed.adobeconnect.com to log in with your netID and password." /></li>
+					<li><img src="help_files/2_Inside_adobeconnect.JPG" title="There are various configurations of this screen." /></li>
+					<li><img src="help_files/3Set_status.png" title="At the top of the screen you can set your status in the classroom." /></li>
+					<li><img src="help_files/4Set_status.png" title="When you set a status, the icon appears next to your name." /></li>
+					<li><img src="help_files/5Set_status.png" title="Once your TA or instructor has allowed webcams in the classroom click &x22;Start My Webcam&x22; for a preview." /></li>
+					<li><img src="help_files/6Set_status.png" title="Click &x22;Start Sharing&x22; to begin sharing your webcam with your TA or instructor. Note: This screen is only a preview." /></li>
+					<li><img src="help_files/7Set_status.png" title="Now the camera is working and you are sharing with your TA or instructor." /></li>
+					<li><img src="help_files/8Set_status.png" title="This is what the classroom can look like once you are sharing your webcam." /></li>
+					<li><img src="help_files/8Set_status.png" title="If your microphone is white like this one, you will need to turn it on so that your TA or instructor will be able to hear you." /></li>
+					
+				</ul>
+			</div>
+			<h2>Schedule an Appointment &mdash; Setster</h2>
+			<div class="bxslider-wrapper">
+				<ul class="bxslider">
+					<li><img src="help_files/1Login.JPG" title="From the &x22;View&x22; page of a course, select a &x22;Learning Checkpoint&x22;" /></li>
+					<li><img src="help_files/2_Inside_adobeconnect.JPG" title="Select the time for your Checkpoint by clicking on a time on the right. Note: An appointment must be scheduled 48 hours in advance." /></li>
+					<li><img src="help_files/3Set_status.png" title="Fill in the blanks and click submit." /></li>
+					<li><img src="help_files/4Set_status.png" title="Once you have completed the sign-up you will receive a confirmation email." /></li>
+				</ul>
+			</div>
+			<h2>Submit BrainHoney Assignment</h2>
+			<div class="bxslider-wrapper">
+				<ul class="bxslider">
+					<li><img src="help_files/1Login.JPG" title="This is the brainhoney home page. First select the course you want to submit an assignment to." /></li>
+					<li><img src="help_files/2_Inside_adobeconnect.JPG" title="Click &x22;View&x22; to see the course." /></li>
+					<li><img src="help_files/3Set_status.png" title="After selecting the assignment you would like to turn in, click &x22;Open&x22;." /></li>
+					<li><img src="help_files/4Set_status.png" title="Click &x22;Browse&x22; to select a file for submission." /></li>
+					<li><img src="help_files/5Set_status.png" title="After selecting the file to be submitted for grading, click &x22;Open&x22;." /></li>
+					<li><img src="help_files/6Set_status.png" title="Now that the assignment is ready to be submitted click &x22;Submit&x22; to send the file to the instructor or TA for grading." /></li>
+				</ul>
+			</div>
+			<h2>View Grades &mdash; BrainHoney</h2>
+			<div class="bxslider-wrapper">
+				<ul class="bxslider">
+					<li><img src="help_files/1Login.JPG" title="Placeholder Caption!" /></li>
+					<li><img src="help_files/2_Inside_adobeconnect.JPG" title="Click on &x22;Grades&x22; in the desired course to see your scores." /></li>
+					<li><img src="help_files/3Set_status.png" title="Here you can see the recorded scores for assignments. To veiw instructor feedback and other details about an assignment click on the score." /></li>
+					<li><img src="help_files/4Set_status.png" title="Here you can see the feedback from your instructor or TA and your score." /></li>
+				</ul>
+			</div>
 			<div id="help-videos">
 				<h2>Tutorials</h2>
 				<div class="tutorial-video-container">
@@ -94,22 +165,27 @@
 			</div>
 			<div>
 				<h2>TA Support</h2>
-				<p>
-					EXSC 221  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					HLTH 335  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					IHUM 202  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					M COM 320  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					NDFS 100  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					PDBIO 210  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					PHSCS 127  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					PSYCH 111  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					REL A 212  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					REL C 324  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					REL C 333  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					SFL 160  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					SFL 260  Betty Henry bhenry@byu.edu 801.422.6300<br/>
-					SOC 111  Betty Henry bhenry@byu.edu 801.422.6300
-				</p>
+				<div class="ta-support-list">
+					<div>
+						<h4>EXSC 221</h4>
+						Betty Henry<br/>
+						bhenry@byu.edu
+						<tel>801.422.6300</tel>
+					</div>
+					<div><h4>HLTH 335</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>IHUM 202</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>M COM 320</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>NDFS 100</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>PDBIO 210</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>PHSCS 127</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>PSYCH 111</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>REL A 212</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>REL C 324</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>REL C 333</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>SFL 160</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>SFL 260</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+					<div><h4>SOC 111</h4>  Betty Henry<br/> bhenry@byu.edu <tel>801.422.6300</tel></div>
+				</div>
 			</div>
 			<div>
 				<h2>Customer Support</h2>

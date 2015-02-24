@@ -76,5 +76,10 @@
 
   .tutorial-video-container {
     width: 45%; } }
+.bxslider-wrapper {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
 
 /*# sourceMappingURL=custom.css.map */

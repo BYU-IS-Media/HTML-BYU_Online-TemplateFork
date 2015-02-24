@@ -14,5 +14,9 @@
 			console.log($info);
 			console.log($parent);
 		});
+		$('.bxslider').bxSlider({
+			  mode: 'fade',
+			  captions: true
+		});
 	});
 })(jQuery);

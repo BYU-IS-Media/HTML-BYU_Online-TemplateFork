@@ -1,0 +1,1 @@
+When you set a status, the icon appears next to your name.
