@@ -1,0 +1,1 @@
+This is the dashboard of Adobe Connect, this is one configuration of many that can be used.
