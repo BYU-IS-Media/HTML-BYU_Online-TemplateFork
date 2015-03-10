@@ -108,6 +108,19 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 	height: 100%;
 }
 
+.course-data {
+	margin:1em;
+}
+
+#topic-search {
+	& .course-title {
+		font-size:1.5em;
+		font-family: "Sentinel A", "Sentinel B", "CreteRound", "Palatino", "DroidSerif", "Droid Serif", Georgia, serif;
+		font-weight: 500;
+	}
+}
+
+
 @media #{$largest_media_breakpoint} {
 	#meeting-schedule {
 		text-align:center;

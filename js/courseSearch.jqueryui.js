@@ -155,6 +155,7 @@
 				this.input.tooltip( "close" ).attr( "title", "" );
 			}, 2500 );
 			this.input.autocomplete( "instance" ).term = "";
+			$(".course-data").empty();
 		},
  
 		_destroy: function() {
@@ -175,8 +176,9 @@
 		
 		$( "#combobox" ).combobox({select: function() {
 			var courseSelector = "#" + $(this).val().replace(/[\s\W]/ig,"-").replace(/\-{2,}/g,"-"),
-				courseSelected = coursePage.find(courseSelector).clone()
+				courseSelected = $('<div>' + coursePage.find(courseSelector)[0].innerHTML + '</div>').addClass("course-data");
 			;
+			courseSelected.find(".info-link").remove();
 			console.log(coursePage);
 			console.log(courseSelector);
 			console.log(courseSelected);
