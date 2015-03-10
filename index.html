@@ -26,7 +26,11 @@
 			 jQueryURL:		 "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
 			 jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
 			 loadslider:		true, // Whether the image slider is present on the page
-			 additionalScripts:	 [], // Array of strings specifying URLs for additional scripts to load
+			 additionalScripts:	 [
+			 	"vendor/jquery.bxslider/jquery.bxslider.min.js",
+			 	"js/custom.js",
+			 	"js/courseSearch.jqueryui.js"
+			 ], // Array of strings specifying URLs for additional scripts to load
 			 gcse_search:		true, // Use the Google Custom Search Engine for the site's search?
 			 gcse_search_id: '009932716493032633443:hlqjz33kfkc',	// Use this BYU GCSE id, or insert your own
 			 analytics_key:	'UA-2108793-1' // Insert your Google Analytics key
@@ -36,7 +40,18 @@
 		</script>
 		<script src="js/init.js"></script>
 		<link rel="stylesheet" href="css/byuonline/custom.css"  media="all and (min-width:160px)" />
-		<link rel="stylesheet" href="css/responsive.css" media="all and (min-width:16em)">
+		<link rel="stylesheet" href="css/responsive.css" media="all and (min-width:16em)" />
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  		<style>
+			.custom-combobox {
+			  position: relative;
+			  display: inline-block;
+			}
+			.custom-combobox-input {
+			  margin: 0;
+			  padding: 5px 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -109,6 +124,28 @@
 			</div>
 			<div id="topic-search">
 				<h2>Welcome</h2>
+				<div class="ui-widget">
+					<label for="combobox" id="combobox-label">What BYU Online class are you taking?</label>
+					<select id="combobox" placeholder="What BYU Online class are you taking?">
+						<option value="">What BYU Online class are you taking?</option>
+						<option value="EXSC 221: Exercise Science">EXSC 221: Exercise Science</option>
+						<option value="HLTH 335: Health Behavior Change">HLTH 335: Health Behavior Change</option>
+						<option value="IHUM 202: Western Humanities">IHUM 202: Western Humanities</option>
+						<option value="M COM 320: Communication in Organization Settings">M COM 320: Communication in Organization Settings</option>
+						<option value="NDFS 100: Essentials of Nutrition">NDFS 100: Essentials of Nutrition</option>
+						<option value="PDBIO 210: Human Anantomy">PDBIO 210: Human Anantomy</option>
+						<option value="PHSCS 127: Descriptive Astronomy">PHSCS 127: Descriptive Astronomy</option>
+						<option value="PSYCH 111: General Psychology">PSYCH 111: General Psychology</option>
+						<option value="REL A 212: The New Testament">REL A 212: The New Testament</option>
+						<option value="REL C 324: The Doctrine and Covenants">REL C 324: The Doctrine and Covenants</option>
+						<option value="REL C 333: The Living Prophets">REL C 333: The Living Prophets</option>
+						<option value="SFL 160: Introduction to Family Processes">SFL 160: Introduction to Family Processes</option>
+						<option value="SFL 260: Family Finance">SFL 260: Family Finance</option>
+						<option value="SOC 111: Introductory Sociology">SOC 111: Introductory Sociology</option>
+						<option value="TMA 150: Public Speaking">TMA 150: Public Speaking</option>
+					</select>
+				</div>
+				<div id="course-data-display"></div>
 			</div>
 			<div id="meeting-schedule">
 				<h2>Mandatory Orientation Meeting Schedule <span><a href="">Why must I attend?</a></span></h2>
@@ -233,5 +270,6 @@
 			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 			s.parentNode.insertBefore(g,s)}(document,'script'));
 		</script>
+		<div id="hidden-data"></div>
 	</body>
 </html>

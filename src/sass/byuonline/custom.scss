@@ -1,5 +1,74 @@
 $largest_media_breakpoint: "screen and (min-width: 850px)";
 
+/*
+	*
+	*	jQuery UI Custom Styling
+	*
+*/
+
+#topic-search {
+	& .ui-widget {
+		& .custom-combobox {
+			width: 38em;
+		}
+		
+		& .ui-state-default, & .ui-widget-content .ui-state-default, & .ui-widget-header .ui-state-default {
+			border: 0.25em solid #5382af;
+			background: #5382af url("images/ui-bg_glass_75_5382af_1x400.png") 50% 50% repeat-x;
+			font-weight: normal;
+			color: black;
+			z-index:2;
+		}
+		
+		
+		& .custom-combobox-input {
+			background: #FFFFFF url("images/ui-bg_glass_75_ffffff_1x400.png") 50% 50% repeat-x;
+			width: 95%;
+			z-index:1;
+		}
+		& .ui-menu .ui-menu-item a, & .custom-combobox a.ui-button {
+		    color: black;
+		    border-radius: 0px;
+		    border: 1px solid #5382af;
+			position: absolute;
+			right: -1.5em;
+			top:0;
+			height: calc(100% - 2px);
+			width: 7%;
+			z-index: -1;
+		}
+		
+		//	Corners
+		& .ui-corner-all, & .ui-corner-bottom, & .ui-corner-left, & .ui-corner-bl {
+			border-bottom-left-radius: 1.25em !important;
+		}
+		& .ui-corner-all, & .ui-corner-top, & .ui-corner-left, & .ui-corner-tl {
+			border-top-left-radius: 1.25em !important;
+		}
+		
+		& .ui-corner-all, & .ui-corner-bottom, & .ui-corner-right, & .ui-corner-br {
+			border-bottom-right-radius: 1.25em !important;
+		}
+		& .ui-corner-all, & .ui-corner-top, & .ui-corner-right, & .ui-corner-tr {
+			border-top-right-radius: 1.25em !important;
+		}
+		& .ui-state-default .ui-icon {
+			background-image: url("../../vendor/jquery-ui-1.11.3/images/ui-icons_ffffff_256x240.png");
+			z-index:3;
+		}
+		& .ui-state-focus .ui-icon {
+			background-image: url("../../vendor/jquery-ui-1.11.3/images/ui-icons_777777_256x240.png");
+			z-index:3;
+		}
+	}
+}
+
+/*
+	*
+	*	END OF jQuery UI Custom Styling
+	*
+*/
+
 .bulleted-list ul,#feature .bulleted-list ul {
 	margin:auto;
 	margin-left: 1.75em;

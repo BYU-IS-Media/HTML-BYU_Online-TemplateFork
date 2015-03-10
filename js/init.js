@@ -15,8 +15,14 @@
     if (typeof window.pageSettings.jQueryURL == "undefined") {
         window.pageSettings.jQueryURL = "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js";
     }
+    if (typeof window.pageSettings.jQueryUIURL == "undefined") {
+        window.pageSettings.jQueryUIURL = "//code.jquery.com/ui/1.11.3/jquery-ui.min.js";
+    }
     if (typeof window.pageSettings.jQueryVersion == "undefined") {
         window.pageSettings.jQueryVersion = "1.10.2";
+    }
+    if (typeof window.pageSettings.jQueryUIVersion == "undefined") {
+        window.pageSettings.jQueryUIVersion = "1.11.3";
     }
     if (typeof window.pageSettings.additionalScripts == "undefined") {
         window.pageSettings.additionalScripts = [];
@@ -27,6 +33,7 @@
         test: typeof jQuery !== "undefined",
         nope: pageSettings.jQueryURL,
         complete: function() {
+            Modernizr.load("//code.jquery.com/ui/" + window.pageSettings.jQueryUIVersion + "/jquery-ui.min.js");
             if (!window.jQuery) {
                 Modernizr.load("//ajax.googleapis.com/ajax/libs/jquery/" + window.pageSettings.jQueryVersion + "/jquery.min.js");
             }
