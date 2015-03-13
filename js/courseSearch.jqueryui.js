@@ -23,8 +23,10 @@
 		{'short-title':"REL C 333", 'title':"The Living Prophets"},
 		{'short-title':"SFL 160", 'title':"Introduction to Family Processes"},
 		{'short-title':"SFL 260", 'title':"Family Finance"},
-		{'short-title':"SOC 111", 'title':"Introductory Sociology"},
-		{'short-title':"TMA 150", 'title':"Public Speaking"}
+		{'short-title':"SOC 111", 'title':"Introductory Sociology"}
+		/*,
+		{'short-title':"STDEV 150", 'title':"Public Speaking"}
+		*/
 	];
 	for(var i=0;i<classes.length;i++) {
 		//var title = classes[i]['short-title']+": "+classes[i]['title'];
@@ -175,15 +177,29 @@
 		});
 		
 		$( "#combobox" ).combobox({select: function() {
-			var courseSelector = "#" + $(this).val().replace(/[\s\W]/ig,"-").replace(/\-{2,}/g,"-"),
-				courseSelected = $('<div>' + coursePage.find(courseSelector)[0].innerHTML + '</div>').addClass("course-data");
+			try {
+				var courseSelector = "#" + $(this).val().replace(/[\s\W]/ig,"-").replace(/\-{2,}/g,"-"),
+					courseSelected = $('<div>' + coursePage.find(courseSelector)[0].innerHTML + '</div>').addClass("course-data");
 			;
+			} catch(err) {
+				console.log($(this).val() + " produced an error!");
+				console.log(err);
+				console.log(courseSelector);
+			}
 			courseSelected.find(".info-link").remove();
-			console.log(coursePage);
-			console.log(courseSelector);
-			console.log(courseSelected);
-			$("#course-data-display").empty().append(courseSelected);
+			courseSelected.find(".course-descriptive").addClass("selected");
 			
+			$("#course-data-display").empty().append(courseSelected);
+			//console.log(coursePage);
+			//console.log(courseSelector);
+			//console.log(courseSelected);
+			/*
+			var heightDetector = courseSelected.clone();
+			$("#topic-search").append(heightDetector); //.insertAfter($(".course-descriptive"));
+			var height = heightDetector.height();
+			heightDetector.remove();
+			window.setTimeout("$('course-data').css('height',"+height+"+'px');$('course-data').addClass('selected');");
+			*/
 		}});
 		/*$( "#toggle" ).click(function() {
 			$( "#combobox" ).toggle();

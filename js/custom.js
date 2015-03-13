@@ -22,8 +22,8 @@
 			  mode: 'fade',
 			  captions: true
 		});
-		$(".course-title").each(function(){
-			console.log($(this).text().replace(/Info/i,"").trim());
-		});
+		//$(".course-title").each(function(){
+		//	console.log($(this).text().replace(/Info/i,"").trim());
+		//});
 	});
 })(jQuery);

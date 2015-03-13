@@ -197,13 +197,16 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 	@include transition-property(height);
 	@include transition-timing-function(ease-in-out);
 }
+
+#course-data-display .course-descriptive {
+	@include transition-duration(1.5s);
+}
 .course-descriptive {
 	@include transition-duration(0.5s);
 }
 .answer {
 	@include transition-duration(0.05s);
 }
-
 
 @media #{$largest_media_breakpoint} {
 	#meeting-schedule {
