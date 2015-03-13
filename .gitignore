@@ -6,3 +6,10 @@ processform.php
 /browser testing
 npm-debug.log
 Gruntfile.js
+
+
+# css local development map files
+*/*.map
+*/*/*.map
+*/*/*/*.map
+*/*/*/*/*.map
