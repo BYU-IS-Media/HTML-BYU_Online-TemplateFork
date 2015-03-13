@@ -1,3 +1,5 @@
+@import "compass/css3/transition";
+
 $largest_media_breakpoint: "screen and (min-width: 850px)";
 
 /*
@@ -118,6 +120,88 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 		font-family: "Sentinel A", "Sentinel B", "CreteRound", "Palatino", "DroidSerif", "Droid Serif", Georgia, serif;
 		font-weight: 500;
 	}
+}
+
+/*
+	*
+	*	Classes specific styles (moved from inline STYLE tag)
+	*
+*/
+
+#class-list li {
+	margin-top:0.25rem;
+	margin-bottom:0.5rem;
+}
+.course-descriptive {
+	display:block;
+	height:0;
+	overflow:hidden;
+}
+.course-descriptive.selected {
+	display:block;
+	height:auto;
+	overflow:hidden;
+}
+.instructor-name:before {
+	content:"Instructor: ";
+	display:inline;
+}
+.instructor-email:before {
+	content:"Instructor Email: ";
+	display:inline;
+}
+.ta-name:before {
+	content:"TA: ";
+	display:inline;
+}
+.ta-email:before {
+	content:"TA Email: ";
+	display:inline;
+}
+
+/*
+	*
+	*	FAQ Specific css (moved from inline STYLE block)
+	*
+*/
+
+			#FAQs > ul > li {
+				list-style-type:none;
+			}
+			#FAQs ul ul li.question:before {
+				content:"Q: "
+			}
+			#FAQs ul ul li.answer:before {
+				content:"A: "
+			}
+			#FAQs ul ul li.question {
+				list-style-type: disc;
+			}
+			#FAQs ul ul li.answer {
+				list-style-type: circle;
+				height:0;
+				overflow:hidden;
+				margin:0.5rem;
+			}
+			#FAQs ul ul li.answer.selected {
+				height:auto;
+			}
+
+/*
+	*
+	*	Animation CSS for click to show stuff
+	*
+*/
+
+.course-descriptive, .answer {
+	@include transition-property(height);
+	@include transition-timing-function(ease-in-out);
+}
+.course-descriptive {
+	@include transition-duration(0.5s);
+}
+.answer {
+	@include transition-duration(0.05s);
 }
 
 
