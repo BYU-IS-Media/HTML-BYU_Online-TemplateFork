@@ -5,14 +5,18 @@
 				$parent = $this.parent().parent(),
 				$info = $parent.find(".course-descriptive, .answer")
 			;
+			console.log("info link clicked");
 			if($info.hasClass("selected")) {
+				$info.removeAttr("style");
 				$info.removeClass("selected");
 			} else {
+				var heightDetector = $info.clone().addClass("selected");
+				heightDetector.insertAfter($info);
+				var height = heightDetector.height();
+				heightDetector.remove();
+				$info.css('height',height+"px");
 				$info.addClass("selected");
 			}
-			console.log($info.hasClass("selected"));
-			console.log($info);
-			console.log($parent);
 		});
 		$('.bxslider').bxSlider({
 			  mode: 'fade',
