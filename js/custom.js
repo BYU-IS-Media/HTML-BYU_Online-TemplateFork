@@ -31,9 +31,6 @@
 			while(liElement.prop("tagName").toLowerCase() != "li" && liElement != null) { liElement = liElement.parent(); }
 			liElement = liElement.parent();
 			while(liElement.prop("tagName").toLowerCase() != "li" && liElement != null) { liElement = liElement.parent(); }
-			console.log(liElement);
-			console.log($this);
-			console.log(window.location.hash);
 			if(window.location.hash.indexOf(liElement.attr("id")) > -1) {
 				$this.click();
 				liElement.addClass("highlight");
