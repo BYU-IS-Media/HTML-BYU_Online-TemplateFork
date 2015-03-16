@@ -89,7 +89,7 @@
 				.appendTo( this.wrapper )
 				.button({
 					icons: {
-						primary: "ui-icon-triangle-1-s"
+						primary: "ui-icon-search magnify2"
 					},
 					text: false
 				})
