@@ -26,7 +26,7 @@
 			 jQueryURL:		 "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
 			 jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
 			 loadslider:		true, // Whether the image slider is present on the page
-			 additionalScripts:	 ["js/custom.js"], // Array of strings specifying URLs for additional scripts to load
+			 additionalScripts:	 ["vendor/jquery.bxslider/jquery.bxslider.min.js","js/custom.js"], // Array of strings specifying URLs for additional scripts to load
 			 gcse_search:		true, // Use the Google Custom Search Engine for the site's search?
 			 gcse_search_id: '009932716493032633443:hlqjz33kfkc',	// Use this BYU GCSE id, or insert your own
 			 analytics_key:	'UA-2108793-1' // Insert your Google Analytics key
@@ -75,7 +75,7 @@
 			<div id="FAQs">
 				<h2>Enrollment</h2>
 				<ul>
-					<li>
+					<li id="q1_1">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">How strict is enrollment or maximum classroom size?</a>
@@ -85,7 +85,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li id="q1_2">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">How do I enroll in the online class?</a>
@@ -95,7 +95,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li id="q1_3">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">When can I apply for my online class?</a>
@@ -105,7 +105,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li id="q1_4">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">I just got added to the class and didn’t receive an email from anyone. Who can I talk to get additional information about my course?</a>
@@ -115,7 +115,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li id="q1_5">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">What are the prerequisites for online courses?</a>
@@ -125,7 +125,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li id="q1_6">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">How much do online courses cost?</a>
@@ -135,7 +135,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li id="q1_7">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">Why is there a waiting list for some online courses?</a>
@@ -145,7 +145,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li id="q1_8">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">Can classes be taken out of state?</a>
@@ -159,7 +159,7 @@
 				
 				<h2>General</h2>
 				<ul>
-					<li>
+					<li id="q2_1">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">What are the major differences between BYU Online and Independent Study?</a>
@@ -168,6 +168,8 @@
 								BYU Online courses are different from Independent Study courses in three main ways: (1) online courses are included in your BYU tuition, while Independent Study courses come at an additional cost; (2) online courses follow a semester schedule, while Independent Study courses allow one year for completion; and (3) online courses have class size limits, while Independent Study has no enrollment caps. 
 							</li>
 						</ul>
+					</li>
+					<li id="q2_2">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">How are online courses formatted? </a>
@@ -176,6 +178,8 @@
 								BYU Online courses use a system called BrainHoney to provide instructional content, assignments, and quizzes. Each course is designed and verified by our in-house team of instructional designers to yield the most efficient and effective learning experience possible.
 							</li>
 						</ul>
+					</li>
+					<li id="q2_3">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">Is the teacher’s voice lost in the online format?</a>
@@ -184,6 +188,8 @@
 								The assigned instructor writes each course. If you define “voice” as the instructor’s personality, then you can rest assured that the online format will favor your instructor’s beloved idiosyncrasies.
 							</li>
 						</ul>
+					</li>
+					<li id="q2_4">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">How long do I have to complete this course?</a>
@@ -192,6 +198,8 @@
 								BYU Online courses must be completed by the end of the semester. Each course includes assignment deadlines designed to help you complete the course on time. You are free to work ahead, and can complete the course as early as the first day of the second block of the semester. (LINK to ACADEMIC CALENDAR) 
 							</li>
 						</ul>
+					</li>
+					<li id="q2_5">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">What is a Checkpoint?</a>
@@ -205,7 +213,7 @@
 
 				<h2>Exams</h2>
 				<ul>
-					<li>
+					<li id="q3_1">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">Are tests given online or in the testing center?</a>
@@ -219,7 +227,7 @@
 
 				<h2>Orientation</h2>
 				<ul>
-					<li>
+					<li id="q4_1">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">How do I know the location of my course’s orientation meeting?</a>
@@ -228,6 +236,8 @@
 								Your professor or TA will email you the week before classes begin to provide details about your course’s orientation meeting time and location.
 							</li>
 						</ul>
+					</li>
+					<li id="q4_2">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">Can I attend the orientation meeting via the Internet?</a>
@@ -236,6 +246,8 @@
 								Orientation meetings are the only aspects of the BYU Online courses that must be attended in person. Your TA may offer a recording of the orientation meeting after it ends, though a recording is never guaranteed.
 							</li>
 						</ul>
+					</li>
+					<li id="q4_3">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">Why is there a mandatory orientation meeting on campus for an online course?</a>
@@ -248,7 +260,7 @@
 				</ul>
 				<h2>BrainHoney</h2>
 				<ul>
-					<li>
+					<li id="q5_1">
 						<ul>
 							<li class="question">
 								<a class="info-link" href="javascript:void(0);">How do I access my grades on assignments?</a>
