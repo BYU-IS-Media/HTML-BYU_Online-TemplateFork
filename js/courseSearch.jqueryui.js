@@ -176,34 +176,27 @@
 			coursePage.append($(justBody).find("#class-list"));
 		});
 		
-		$( "#combobox" ).combobox({select: function() {
-			try {
-				var courseSelector = "#" + $(this).val().replace(/[\s\W]/ig,"-").replace(/\-{2,}/g,"-"),
-					courseSelected = $('<div>' + coursePage.find(courseSelector)[0].innerHTML + '</div>').addClass("course-data");
-			;
-			} catch(err) {
-				console.log($(this).val() + " produced an error!");
-				console.log(err);
-				console.log(courseSelector);
+		$( "#combobox" ).combobox({
+			select: function() {
+				try {
+					var courseSelector = "#" + $(this).val().replace(/[\s\W]/ig,"-").replace(/\-{2,}/g,"-"),
+						courseSelected = $('<div>' + coursePage.find(courseSelector)[0].innerHTML + '</div>').addClass("course-data");
+				;
+				} catch(err) {
+					console.log($(this).val() + " produced an error!");
+					console.log(err);
+					console.log(courseSelector);
+				}
+				courseSelected.find(".info-link").remove();
+				$("#course-data-display").empty().append(courseSelected);
+				courseSelected.find(".course-descriptive").css("height",$(".course-descriptive").height());
+				courseSelected.find(".course-descriptive").setAnimationHeight(courseSelected.parent());
+				$(".course-descriptive").removeAttr("style").css("height",$(".course-descriptive").attr("data-animation-height")).addClass("selected");
+			},
+			focus:function(){
+				$(".selected").removeClass("selected");
 			}
-			courseSelected.find(".info-link").remove();
-			courseSelected.find(".course-descriptive").addClass("selected");
-			
-			$("#course-data-display").empty().append(courseSelected);
-			//console.log(coursePage);
-			//console.log(courseSelector);
-			//console.log(courseSelected);
-			/*
-			var heightDetector = courseSelected.clone();
-			$("#topic-search").append(heightDetector); //.insertAfter($(".course-descriptive"));
-			var height = heightDetector.height();
-			heightDetector.remove();
-			window.setTimeout("$('course-data').css('height',"+height+"+'px');$('course-data').addClass('selected');");
-			*/
-		}});
-		/*$( "#toggle" ).click(function() {
-			$( "#combobox" ).toggle();
-		});*/
+		});
 		$("#combobox-label").remove();
 	});
 })( jQuery );
