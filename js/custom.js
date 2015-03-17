@@ -5,7 +5,7 @@
 				$parent = $this.parent().parent(),
 				$info = $parent.find(".course-descriptive, .answer")
 			;
-			console.log("info link clicked");
+			//console.log("info link clicked");
 			if($info.hasClass("selected")) {
 				$info.removeAttr("style");
 				$info.removeClass("selected");
@@ -31,11 +31,13 @@
 			while(liElement.prop("tagName").toLowerCase() != "li" && liElement != null) { liElement = liElement.parent(); }
 			liElement = liElement.parent();
 			while(liElement.prop("tagName").toLowerCase() != "li" && liElement != null) { liElement = liElement.parent(); }
-			if(window.location.hash.indexOf(liElement.attr("id")) > -1) {
-				$this.click();
-				liElement.addClass("highlight");
-				liElement.find(".question").addClass("text-success");
-				liElement.find(".answer").addClass("text-warning");
+			if(liElement) {
+				if(window.location.hash.indexOf(liElement.attr("id")) > -1) {
+					$this.click();
+					liElement.addClass("highlight");
+					liElement.find(".question").addClass("text-success");
+					liElement.find(".answer").addClass("text-warning");
+				}
 			}
 		});
 		
