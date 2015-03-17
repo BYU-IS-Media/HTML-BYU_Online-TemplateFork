@@ -1,3 +1,35 @@
+(function(window, $){
+	var Plugin = function(elem){
+		this.elem = elem;
+		this.$elem = $(elem);
+	};
+	Plugin.prototype = {
+		setTestLocation:function(elem) {
+			if(elem!=undefined)
+				this.testLocation = elem;
+			else
+				this.testLocation = $("body > *").last();
+			return this;
+		},
+		setAnimationHeight: function() {
+			var $this = this.$elem,
+				heightDetector = $this.clone().addClass("selected");
+			heightDetector.insertAfter(this.testLocation);
+			heightDetector.removeAttr("style");
+			var height = heightDetector.height();
+			heightDetector.remove();
+			$this.attr("data-animation-height",height);
+			return this;
+		}
+	};
+	$.fn.setAnimationHeight = function(elem) {
+		return this.each(function() {
+			new Plugin(this).setTestLocation(elem).setAnimationHeight();
+		});
+	};
+	window.Plugin = Plugin;
+})(window, jQuery);
+
 (function($){
 	$(document).ready(function(){
 		$("a.info-link").on("click",function( e ) {
@@ -10,10 +42,8 @@
 				$info.removeAttr("style");
 				$info.removeClass("selected");
 			} else {
-				var heightDetector = $info.clone().addClass("selected");
-				heightDetector.insertAfter($info);
-				var height = heightDetector.height();
-				heightDetector.remove();
+				$info.setAnimationHeight($info);
+				var height = $info.attr("data-animation-height");
 				$info.css('height',height+"px");
 				$info.addClass("selected");
 			}
