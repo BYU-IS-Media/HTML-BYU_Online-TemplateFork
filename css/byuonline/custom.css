@@ -39,7 +39,7 @@
 .bulleted-list ul > li { list-style: disc; line-height: 1.5em; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\0000392}}
-.tutorial-video-container { width: 95%; display: inline-block; margin: 1rem; }
+.tutorial-video-container, .course-video-container { width: 95%; display: inline-block; margin: 1rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\0000397}}
 .videoWrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0; }
