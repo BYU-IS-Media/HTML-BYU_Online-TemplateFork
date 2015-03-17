@@ -70,6 +70,9 @@
 				}
 			}
 		});
-		
+		if(window.location.hash.length > 0) {
+			console.log("scrolling to hash "+window.location.hash);
+			$('html,body').animate({ scrollTop: $(window.location.hash).offset().top});
+		}
 	});
 })(jQuery);
