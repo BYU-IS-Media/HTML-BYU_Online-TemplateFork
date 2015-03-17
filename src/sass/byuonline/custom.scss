@@ -38,7 +38,7 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 			top:0;
 			height: calc(100% - 2px);
 			width: 7%;
-			z-index: -1;
+			z-index: 4;
 		}
 		
 		//	Corners
@@ -62,6 +62,22 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 		& .ui-state-focus .ui-icon {
 			background-image: url("../../vendor/jquery-ui-1.11.3/images/ui-icons_777777_256x240.png");
 			z-index:3;
+		}
+		
+		// Search thing inner-:before corners (for fun and profit)
+		& .custom-combobox a.ui-button:before {
+			height:calc(100% - 6px);
+			width:1.25em;
+			
+			border-bottom-right-radius: 1.25em !important;
+			border-top-right-radius: 1.25em !important;
+			background-color:white;
+			
+			content: "";
+			display:block;
+			position:absolute;
+			left:-3px;
+			top:3px;
 		}
 	}
 }
@@ -287,7 +303,7 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 				width: 38em;
 			}
 			*/
-			
+			/*
 			& .ui-state-default, & .ui-widget-content .ui-state-default, & .ui-widget-header .ui-state-default {
 				border: 0.25em solid #5382af;
 				background: #5382af url("../../vendor/jquery-ui-1.11.3/images/ui-bg_glass_75_5382af_1x400.png") 50% 50% repeat-x;
@@ -336,6 +352,7 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 				background-image: url("../../vendor/jquery-ui-1.11.3/images/ui-icons_777777_256x240.png");
 				z-index:3;
 			}
+			*/
 		}
 	}
 	
