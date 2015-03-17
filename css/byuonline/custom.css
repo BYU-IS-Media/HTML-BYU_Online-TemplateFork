@@ -116,7 +116,7 @@
 .course-descriptive, .answer { -moz-transition-property: height; -o-transition-property: height; -webkit-transition-property: height; transition-property: height; -moz-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003223}}
-#course-data-display .course-descriptive { -moz-transition-duration: 1.5s; -o-transition-duration: 1.5s; -webkit-transition-duration: 1.5s; transition-duration: 1.5s; }
+#course-data-display .course-descriptive { -moz-transition-duration: 1s; -o-transition-duration: 1s; -webkit-transition-duration: 1s; transition-duration: 1s; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003226}}
 .course-descriptive { -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; }
