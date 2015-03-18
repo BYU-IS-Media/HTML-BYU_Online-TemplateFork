@@ -164,21 +164,33 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 	height:auto;
 	overflow:hidden;
 }
+.course-description {
+	padding:0.5em;
+	box-sizing: border-box;
+}
+.instructor-name,.instructor-email,.ta-name,.ta-email {
+	margin:0.25em;
+}
+.instructor-name:before,.instructor-email:before,.ta-name:before,.ta-email:before {
+	display:inline-block;
+	
+	min-width:13em;
+	padding-right:0.25rem; 
+	
+	font-weight:bold;
+	text-align:right;
+}
 .instructor-name:before {
 	content:"Instructor: ";
-	display:inline;
 }
 .instructor-email:before {
 	content:"Instructor Email: ";
-	display:inline;
 }
 .ta-name:before {
 	content:"TA: ";
-	display:inline;
 }
 .ta-email:before {
 	content:"TA Email: ";
-	display:inline;
 }
 
 /*
