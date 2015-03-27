@@ -249,6 +249,17 @@ $largest_media_breakpoint: "screen and (min-width: 850px)";
 }
 
 
+/*
+	*
+	*	Corrections to the base styling (weird stuff)
+	*
+*/
+#page-footer a, #page-footer a:link, #page-footer a,
+#page-footer a, #page-footer a:link, #page-footer a:active,
+#page-footer a, #page-footer a:link, #page-footer a:visited {
+	display:inline-block;
+}
+
 @media #{$largest_media_breakpoint} {
 	#meeting-schedule {
 		text-align:center;
