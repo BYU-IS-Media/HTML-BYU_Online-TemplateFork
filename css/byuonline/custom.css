@@ -136,30 +136,38 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003247}}
 #meeting-schedule > h2 > span { font-size: 1rem; }
 
-@media screen and (min-width: 850px) { @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003253}}
+/*
+	*
+	*	Corrections to the base styling (weird stuff)
+	*
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003257}}
+#page-footer a, #page-footer a:link, #page-footer a, #page-footer a, #page-footer a:link, #page-footer a:active, #page-footer a, #page-footer a:link, #page-footer a:visited { display: inline-block; }
+
+@media screen and (min-width: 850px) { @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003264}}
   #meeting-schedule { text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003256}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003267}}
   #meeting-schedule .schedules { display: flex; flex-flow: row nowrap; justify-content: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003262}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003273}}
   #meeting-schedule > h2 { text-align: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003266}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003277}}
   #meeting-schedule .schedules > div.day { align-self: flex-start; width: 23%; vertical-align: top; text-align: left; margin: 0; padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003274}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003285}}
   #meeting-schedule .schedules > div.day h3 { background-color: #151c46; color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003278}}
-  #meeting-schedule .schedules > div.day .calendar-item { border: 1px solid #ccc; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003282}}
-  #meeting-schedule .schedules > div.day .calendar-item, #meeting-schedule .schedules > div.day h3 { padding: 0.25em; margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003286}}
-  #meeting-schedule .schedules > div.day .calendar-item:nth-child(even), #meeting-schedule .schedules > div.day h3:nth-child(even) { /*background-color:#ccc;*/ }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003289}}
-  #meeting-schedule .schedules > div.day .calendar-item:nth-child(odd), #meeting-schedule .schedules > div.day h3:nth-child(odd) { /*background-color:#333;*/ }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003292}}
-  #meeting-schedule .schedules > div.day .calendar-item .time, #meeting-schedule .schedules > div.day h3 .time { float: none; display: block; width: 100%; text-align: left; }
+  #meeting-schedule .schedules > div.day .calendar-item { border: 1px solid #ccc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003293}}
+  #meeting-schedule .schedules > div.day .calendar-item, #meeting-schedule .schedules > div.day h3 { padding: 0.25em; margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003297}}
+  #meeting-schedule .schedules > div.day .calendar-item:nth-child(even), #meeting-schedule .schedules > div.day h3:nth-child(even) { /*background-color:#ccc;*/ }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003300}}
+  #meeting-schedule .schedules > div.day .calendar-item:nth-child(odd), #meeting-schedule .schedules > div.day h3:nth-child(odd) { /*background-color:#333;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003303}}
+  #meeting-schedule .schedules > div.day .calendar-item .time, #meeting-schedule .schedules > div.day h3 .time { float: none; display: block; width: 100%; text-align: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003311}}
   .tutorial-video-container { width: 45%; }
   /* 	* 	*	jQuery UI Custom Styling 	* */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003323}}
   #topic-search .ui-widget { /*
 & .custom-combobox {
 	width: 38em;
@@ -212,5 +220,5 @@
 }
 */ }
   /* 	* 	*	END OF jQuery UI Custom Styling 	* */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003389}}
 .bxslider-wrapper { max-width: 640px; margin-left: auto; margin-right: auto; text-align: center; }

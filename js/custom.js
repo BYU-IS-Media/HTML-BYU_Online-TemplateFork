@@ -30,7 +30,7 @@
 	window.Plugin = Plugin;
 })(window, jQuery);
 
-(function($){
+(function($, undefined){
 	$(document).ready(function(){
 		$("a.info-link").on("click",function( e ) {
 			var $this = $(this),
@@ -58,9 +58,9 @@
 		$(".info-link").each(function(){
 			var $this = $(this),
 				liElement = $this.parent();
-			while(liElement.prop("tagName").toLowerCase() != "li" && liElement != null) { liElement = liElement.parent(); }
+			while(liElement != undefined && liElement.length > 0 && typeof liElement.prop("tagName") == "string" && liElement.prop("tagName").toLowerCase() != "li") { liElement = liElement.parent(); }
 			liElement = liElement.parent();
-			while(liElement.prop("tagName").toLowerCase() != "li" && liElement != null) { liElement = liElement.parent(); }
+			while(liElement != undefined && liElement.length > 0 && typeof liElement.prop("tagName") == "string" && liElement.prop("tagName").toLowerCase() != "li") { liElement = liElement.parent(); }
 			if(liElement) {
 				if(window.location.hash.indexOf(liElement.attr("id")) > -1) {
 					$this.click();
@@ -75,4 +75,4 @@
 			$('html,body').animate({ scrollTop: $(window.location.hash).offset().top});
 		}
 	});
-})(jQuery);
+})(jQuery, undefined);
