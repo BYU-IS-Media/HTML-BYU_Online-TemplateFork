@@ -11,6 +11,7 @@
 	 */
 	var classes = [
 		{'short-title':"EXSC 221", 'title': "Exercise Science"},
+		{'short-title':"COMMS 300", 'title': "Media Ethics, Law, and Responsibility"},
 		{'short-title':"HLTH 335", 'title':"Health Behavior Change"},
 		{'short-title':"IHUM 202", 'title':"Western Humanities"},
 		{'short-title':"M COM 320", 'title':"Communication in Organization Settings"},
@@ -200,4 +201,3 @@
 		$("#combobox-label").remove();
 	});
 })( jQuery );
- 
