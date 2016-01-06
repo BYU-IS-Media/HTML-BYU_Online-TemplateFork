@@ -19,6 +19,7 @@
 		<!-- Styles-->
 		<link rel="stylesheet" href="//cloud.typography.com/75214/740862/css/fonts.css">
 		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/feedback_form.css">
 		<!-- Scripts loaded via script loader. See notes in init.js file.-->
 		<script src="js/modernizr.js"></script>
 		<script>
@@ -29,7 +30,8 @@
 			 additionalScripts:	 [
 			 	"vendor/jquery.bxslider/jquery.bxslider.min.js",
 			 	"js/custom.js",
-			 	"js/courseSearch.jqueryui.js"
+			 	"js/courseSearch.jqueryui.js",
+			 	"js/feedback_form.js"
 			 ], // Array of strings specifying URLs for additional scripts to load
 			 gcse_search:		true, // Use the Google Custom Search Engine for the site's search?
 			 gcse_search_id: '009932716493032633443:hlqjz33kfkc',	// Use this BYU GCSE id, or insert your own
@@ -137,6 +139,23 @@
 					</select>
 				</div>
 				<div id="course-data-display"></div>
+			</div>
+			<div id="form-container">
+				<form id="feedback-form">
+					<h2>Suggest a Class</h2>
+					<h4>Which class should we add?</h4>
+					<div>
+						<label for="person">Name
+						<input type="text" name="person" id="person" /></label>
+					</div><div>
+						<label for="contact_info">Email Address
+						<input type="text" id="contact_info"  name="contact_info" /></label>
+					</div><div>
+						<label for="request">Class
+						<input type="text" id="request" name="request" /></label>
+					</div>
+					<button id="submit">Submit</button>
+				</form>
 			</div>
 			<div id="meeting-schedule">
 				<h2>
