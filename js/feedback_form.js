@@ -19,6 +19,50 @@
 				console.log(settings.url);
 			}
 		});
+		
+		var tid = 6676;
+		var tpid = 667;
+		var pid = "TytyForm1 "+(new Date().getTime() / 1000);
+		
+		var pdata = {},
+			formSerial = $("#feedback-form").serializeArray(),
+			timeStamp = (new Date().getTime() / 1000);
+			allFilledOut = true
+		;
+		e.preventDefault();
+		$("#feedback-form input").each(function( i, el ){
+			var $el = $(el);
+			if($el.val() == "") {
+				allFilledOut = false;
+				$el.css("border","1px solid red");
+				$el.attr("placeholder","Invalid input! "+$el.attr("placeholder"));
+			}
+		});
+		if(allFilledOut) {
+			//	The form is filled out and the submission will process...
+		} else {
+			//	The form is not filled out and this will stop submission.
+			return false;
+		}
+		for(var i=0;i<formSerial.length; i++) {
+			if(formSerial[i].name == "person") formSerial[i].name = 'identity';
+			pdata[i] = JSON.stringify({
+				name:			formSerial[i].name,
+				value:		formSerial[i].value,
+				"t-id":		tid,
+				"tp-id":	tpid,
+				"p-id":		pid
+			});
+		}
+		$.ajax({
+			type: "POST",
+			url: "//is.byu.edu/site/page/landing_page_submit.json.cfm",
+			data: pdata,
+			success: function() {}
+		});
+		console.log("Data being sent to landing page data viewer");
+		
+		
 	}
 	
 	$(document).ready(function(){

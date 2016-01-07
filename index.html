@@ -194,9 +194,12 @@
 						<textarea id="request" name="request" placeholder="Rhetoric & Civilization 2, ENGL 212 or something that fills my Civ 1 requirement"></textarea></label><label for="person">Name
 						<input type="text" name="person" id="person" placeholder="Jane Doe" /></label><label for="contact_info">Email Address
 						<input type="text" id="contact_info"  name="contact_info" placeholder="janedoe@byu.edu" />
+						<input type="hidden" id="form-id" name="form" value="BYU Online Course Request">
+						<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="false">
 					</label>
 					<button id="submit">Submit</button>
 					<div id="submit-message"></div>
+					<div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>
 				</form>
 			</div>
 		</section>
