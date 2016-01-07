@@ -68,10 +68,10 @@
 				<h1><a id="site-name" href="index.html" title="BYU Semester Online">BYU Online</a></h1><!---	<a href="http://home.byu.edu/home/cas" class="sign-in button">Sign in</a>	--->
 			</div>
 		</header>
-		<div id="search-menu">
+		<section id="search-menu">
 			<a href="#primary-nav" class="menu-button">Menu</a>
-		</div>
-		<div id="content" role="main" class="wrapper clearfix ">
+		</section>
+		<section id="content" role="main" class="wrapper clearfix ">
 			<div id="feature">
 				<!--Anything Slider
 				-->
@@ -140,24 +140,6 @@
 				</div>
 				<div id="course-data-display"></div>
 			</div>
-			<div id="form-container">
-				<form id="feedback-form">
-					<h2>Suggest a Class</h2>
-					<h4>Which class should we add?</h4>
-					<div>
-						<label for="person">Name
-						<input type="text" name="person" id="person" /></label>
-					</div><div>
-						<label for="contact_info">Email Address
-						<input type="text" id="contact_info"  name="contact_info" /></label>
-					</div><div>
-						<label for="request">Class
-						<input type="text" id="request" name="request" /></label>
-					</div>
-					<button id="submit">Submit</button>
-					<div id="submit-message"></div>
-				</form>
-			</div>
 			<div id="meeting-schedule">
 				<h2>
 					Mandatory Orientation Meeting Schedule
@@ -204,8 +186,21 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="nav-container">
+			<div id="form-container" class="feedback-section" role="contentinfo">
+				<form id="feedback-form">
+					<h2>We want your feedback!</h2>
+					<h4>Can't find the course you need?<br/>Please tell us which course you wanted, but didn't find here.</h4>
+					<label for="request">Class
+						<input type="text" id="request" name="request" /></label><label for="person">Name
+						<input type="text" name="person" id="person" /></label><label for="contact_info">Email Address
+						<input type="text" id="contact_info"  name="contact_info" />
+					</label>
+					<button id="submit">Submit</button>
+					<div id="submit-message"></div>
+				</form>
+			</div>
+		</section>
+		<section class="nav-container">
 			<!-- Primary Nav-->
 			<nav id="primary-nav" role="navigation">
 				<ul>
@@ -245,7 +240,7 @@
 					</li>
 				</ul>
 			</nav> -->
-		</div>
+		</section>
 		<footer id="page-footer" role="contentinfo">
 			<div id="footer-links">
 				<div class="wrapper">

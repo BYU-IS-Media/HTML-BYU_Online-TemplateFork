@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
 #form-container{
-	padding:1.5rem 0;
+	/*padding:1.5rem 0;*/
 }
 
 form h2 {
@@ -14,13 +14,56 @@ form > div {
 	margin-right:16px;
 	display:inline-block;
 }
-
-form input {
+.feedback-section form input {
 	width:100%;
 }
+.feedback-section form input,.feedback-section form button {
+	padding: 0.5em;
+}
 
-form button {
+.feedback-section button {
 	display:block;
 	width:86px;
-	margin-top:16px;
+	margin-top:16px;	
+	border: 1px solid white;
+    background: #5382af url("../../vendor/jquery-ui-1.11.3/images/ui-bg_glass_75_5382af_1x400.png") 50% 50% repeat-x;
+    font-weight: normal;
+    color: white;
+    z-index: 2;
+}
+.feedback-section {
+	background-color:#5382af;
+	color:white;
+	margin: 0 -9vw;
+	padding: 0 9%;
+}
+.feedback-form {
+	display:block;
+}
+#content {
+	padding-bottom: 0;
+}
+
+@media (min-width: 600px) {
+	.feedback-form {
+	    margin: 0 -9% 0;
+	}
+	.feedback-section label {
+		display:block;
+		max-width: 50%;
+	}
+	#content {
+		padding-bottom:0 !important;
+	}
+}
+
+@media screen and (min-width: 1146px) {
+	.feedback-section {
+		margin-left: calc((-100vw + 939.72px)/2);
+		margin-right: calc((-100vw + 939.72px)/2);
+		padding:1.5em 103.14px;
+	}
+	.feedback-section > * {
+		width: 939.72px;
+	}
 }
