@@ -66,4 +66,9 @@ form > div {
 	.feedback-section > * {
 		width: 939.72px;
 	}
+	#feedback-form {
+	    max-width: 939.72px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
 }
