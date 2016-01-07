@@ -14,10 +14,11 @@ form > div {
 	margin-right:16px;
 	display:inline-block;
 }
-.feedback-section form input {
+.feedback-section form input,.feedback-section form textarea {
 	width:100%;
+	border: 1px solid #151c46;
 }
-.feedback-section form input,.feedback-section form button {
+.feedback-section form input,.feedback-section form button,.feedback-section form textarea {
 	padding: 0.5em;
 }
 
@@ -26,10 +27,10 @@ form > div {
 	width:86px;
 	margin-top:16px;	
 	border: 1px solid white;
-    background: #5382af url("../../vendor/jquery-ui-1.11.3/images/ui-bg_glass_75_5382af_1x400.png") 50% 50% repeat-x;
-    font-weight: normal;
-    color: white;
-    z-index: 2;
+	background: #5382af url("../../vendor/jquery-ui-1.11.3/images/ui-bg_glass_75_5382af_1x400.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: white;
+	z-index: 2;
 }
 .feedback-section {
 	background-color:#5382af;
