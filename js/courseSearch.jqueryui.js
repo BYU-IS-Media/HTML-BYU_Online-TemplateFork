@@ -11,10 +11,12 @@
 	 */
 	var classes = [
 		{'short-title':"EXSC 221", 'title': "Exercise Science"},
+        {'short-title':"ELED 203", 'title': "Foundations of Multicultural Education"},
 		{'short-title':"COMMS 300", 'title': "Media Ethics, Law, and Responsibility"},
 		{'short-title':"HLTH 335", 'title':"Health Behavior Change"},
 		{'short-title':"HCOLL 399R", 'title':"Academic Internship"},
 		{'short-title':"IHUM 202", 'title':"Western Humanities"},
+        {'short-title':"IP&amp;T 371", 'title':"Common Educational Technologies"},
 		{'short-title':"M COM 320", 'title':"Communication in Organization Settings"},
 		{'short-title':"MUSIC 201", 'title':"Civilization: Music 1"},
 		{'short-title':"MUSIC 202", 'title':"Civilization: Music 2"},
