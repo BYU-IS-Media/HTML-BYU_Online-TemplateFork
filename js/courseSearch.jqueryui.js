@@ -172,7 +172,9 @@
 	
 	$(function() {
 		var coursePage = $("<div></div>");
-		$.ajax("Classes.html").success(function(  textResult, status, jqXHR ){
+		var classesURL = "Classes.html";
+		if(location.hostname.toString().toLowerCase().indexOf("byuonline") == 0) classesURL = "/classes";
+		$.ajax(classesURL).success(function(  textResult, status, jqXHR ){
 			var justBody = (/\<body[^\>]*\>((.|[\r\n])+)\<\/body/gim).exec(textResult);
 			if(justBody.length > 1) {
 				justBody = justBody[1];
