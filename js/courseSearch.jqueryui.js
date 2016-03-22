@@ -9,6 +9,14 @@
 	/*
 	 * Custom data for class list
 	 */
+	var debug = {
+		on:((/(local|byuonline)/i).test(location.hostname.toString())),
+		log:function(){
+			if(this.on && console){
+				console.log.apply(console, arguments);
+			}
+		}
+	};
 	var classes = [
 		{'short-title':"EXSC 221", 'title': "Exercise Science"},
         {'short-title':"ELED 203", 'title': "Foundations of Multicultural Education"},
@@ -173,15 +181,106 @@
 	});
 	
 	$(function() {
-		var coursePage = $("<div></div>");
+		var coursePage = $("<div>");
 		var classesURL = "Classes.html";
 		if(location.hostname.toString().toLowerCase().indexOf("byuonline") == 0) classesURL = "/classes";
 		$.ajax(classesURL).success(function(  textResult, status, jqXHR ){
 			var justBody = (/\<body[^\>]*\>((.|[\r\n])+)\<\/body/gim).exec(textResult);
 			if(justBody.length > 1) {
 				justBody = justBody[1];
-			}else justBody = "<div>Error: No data found.</div>";
-			coursePage.append($(justBody).find("#class-list"));
+			} else justBody = "<div>Error: No data found.</div>";
+			var classList = $(justBody).find(".class-list");
+			if(classList.length > 0) {
+				coursePage.append(classList);
+				var classesFound = {};
+				$(classList).find(".course-title").each( function( i,el ) {
+					//debug.log($(el).text().trim());
+					var foundTitle = $(el).text().trim().match(/^\S{3,}\s+\S{3,}/m);
+					var objKey = $(el).text().trim().split(/[\r\n]+/mg)[0];
+					if(foundTitle) {
+						foundTitle = new RegExp(foundTitle[0].replace(/\W/g,"."),"i");
+						//debug.log("Testing against: ",foundTitle);
+						$("#combobox").find("option").each( function (j,op) {
+							var matchTitle = $(op).text().trim().split(/[\r\n]+/mg)[0];
+							if(matchTitle) {
+								if(matchTitle instanceof Array)
+									matchTitle = matchTitle[0];
+								if(foundTitle.test(matchTitle)) {	//	found a match!
+									//debug.log(matchTitle.trim());
+									if(Object.keys(classesFound).indexOf(objKey) == -1)
+											classesFound[objKey] = [];
+									classesFound[objKey].push(matchTitle); 
+								}
+							}
+						});
+						if(Object.keys(classesFound).indexOf($(el).text().trim().split(/[\r\n]+/mg)[0]) == -1) {
+							debug.log("Failed to find matching option for:",objKey);
+							var newOption = $("<option>");
+							var titleMatchRegEx = /^(\S{3,})\s+(\d{3,}r?)\s+?(Sec(?:tion)?\s+\d+)?\s*([^\(\r\n]+)(?:\(([^\)]+)\))?(?:[\s\r\n\t]+Info$)?/im;
+							var newOptionText = $(el).text().trim().replace(titleMatchRegEx,"$1 $2: $4").trim();
+							//debug.log($(el).text().trim().match());
+							var newOptionSelector = "#"+newOptionText.trim().replace(/\W/ig,"-").replace(/-{2,}/g,"-");
+							if(coursePage.find(newOptionSelector).length > 0) {
+								newOption.html(newOptionText);
+								newOption.val(newOptionText);
+								debug.log("Appending new option for search:",{newOptionSelector},{newOptionText},"Please consider adding this option to the HTML.",{html:newOption[0].outerHTML});
+								$("#combobox").append(newOption);
+							} else {
+								var patternMatched = titleMatchRegEx.exec($(el).text().trim());
+								var probableMatches = [];
+								var probableError = "Text in course title doens't match id in classes data.";
+								patternMatched.shift();
+								delete patternMatched.index;
+								delete patternMatched.input;
+								coursePage.find(".course-data").each(function(i,el){
+									if(foundTitle.test($(el).attr("id"))) {
+										probableMatches.push($(el).attr("id"));
+									}
+									if((/[^\w-]/).test($(el).attr("id"))) {
+										probableError = "The id in classes data is malformed, it contains invalid characters!";
+										//$.error($(el).attr("id")+"; "+probableError);
+									}
+								});
+								debug.log("Course data found in \"Classes\", but not added to search.","Probably because it has a bad id tag:",{
+									titleMatchData:patternMatched,
+									soughtId: newOptionSelector,
+									probableMatches,
+									probableError
+								});
+							}
+						}
+					} else {
+						debug.log("Failed to index title for:",$(el).text().trim());
+					}
+				});
+				//debug.log("Classes found array:",classesFound);
+				$("#combobox").find("option").each(function(i,el) {
+					var selector = "#"+($(el).val().replace(/\W/g,"-").replace(/-{2,}/g,"-"));
+					var probableMatches = [];
+					var probableError = "This course doesn't exist in the classes page data.";
+					if(selector.length > 1 && coursePage.find(selector).length == 0) {	//	This search option won't work!
+						var idPattern = selector.match(/\w+[-\_](?:\w+[-\_])?\d{3,}r?/i);
+						if(idPattern) {
+							idPattern = new RegExp(idPattern[0].replace(/\W/ig,".+"),"i");
+							coursePage.find(".course-data").each(function(i,cdel){
+								if(idPattern.test($(cdel).attr("id"))) {
+									probableMatches.push($(cdel).attr("id"));
+									probableError = "The id in classes data doesn't match the id provided in the search select options.";
+									if((/[^\w-]/).test($(cdel).attr("id")))
+										probableError = "The id in classes data is malformed, it contains invalid characters!";
+								}
+							});
+						}
+						$(el).remove;
+						debug.log("Removing search option because it isn't found in the classes data. (It wouldn't do anything on click if we left it.)",{selector,probableMatches,probableError,idPattern});
+					}
+				});
+			} else {
+				debug.log("Error! No classes found.");
+				$.error("Classes.html failed to resolve.");
+			}
+		}).fail(function( jqXHR, textStatus, errorThrown ){
+			debug.log("Classes.html failed with this message: ",errorThrown);
 		});
 		
 		$( "#combobox" ).combobox({
@@ -191,9 +290,9 @@
 						courseSelected = $('<div>' + coursePage.find(courseSelector)[0].innerHTML + '</div>').addClass("course-data");
 				;
 				} catch(err) {
-					console.log($(this).val() + " produced an error!");
-					console.log(err);
-					console.log(courseSelector);
+					debug.log($(this).val() + " produced an error!");
+					debug.log(err);
+					debug.log(courseSelector);
 				}
 				courseSelected.find(".info-link").remove();
 				$("#course-data-display").empty().append(courseSelected);
@@ -208,3 +307,70 @@
 		$("#combobox-label").remove();
 	});
 })( jQuery );
+
+
+//Production steps of ECMA-262, Edition 5, 15.4.4.14
+//Reference: http://es5.github.io/#x15.4.4.14
+if (!Array.prototype.indexOf) {
+Array.prototype.indexOf = function(searchElement, fromIndex) {
+
+ var k;
+
+ // 1. Let o be the result of calling ToObject passing
+ //    the this value as the argument.
+ if (this == null) {
+   throw new TypeError('"this" is null or not defined');
+ }
+
+ var o = Object(this);
+
+ // 2. Let lenValue be the result of calling the Get
+ //    internal method of o with the argument "length".
+ // 3. Let len be ToUint32(lenValue).
+ var len = o.length >>> 0;
+
+ // 4. If len is 0, return -1.
+ if (len === 0) {
+   return -1;
+ }
+
+ // 5. If argument fromIndex was passed let n be
+ //    ToInteger(fromIndex); else let n be 0.
+ var n = +fromIndex || 0;
+
+ if (Math.abs(n) === Infinity) {
+   n = 0;
+ }
+
+ // 6. If n >= len, return -1.
+ if (n >= len) {
+   return -1;
+ }
+
+ // 7. If n >= 0, then Let k be n.
+ // 8. Else, n<0, Let k be len - abs(n).
+ //    If k is less than 0, then let k be 0.
+ k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
+
+ // 9. Repeat, while k < len
+ while (k < len) {
+   // a. Let Pk be ToString(k).
+   //   This is implicit for LHS operands of the in operator
+   // b. Let kPresent be the result of calling the
+   //    HasProperty internal method of o with argument Pk.
+   //   This step can be combined with c
+   // c. If kPresent is true, then
+   //    i.  Let elementK be the result of calling the Get
+   //        internal method of o with the argument ToString(k).
+   //   ii.  Let same be the result of applying the
+   //        Strict Equality Comparison Algorithm to
+   //        searchElement and elementK.
+   //  iii.  If same is true, return k.
+   if (k in o && o[k] === searchElement) {
+     return k;
+   }
+   k++;
+ }
+ return -1;
+};
+}
