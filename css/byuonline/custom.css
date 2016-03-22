@@ -64,7 +64,7 @@
 	*
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003153}}
-#class-list li { margin-top: 0.25rem; margin-bottom: 0.5rem; }
+.class-list li { margin-top: 0.25rem; margin-bottom: 0.5rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/GitHub\/HTML-BYU_Online-TemplateFork\/src\/sass\/byuonline\/custom\.scss}line{font-family:\00003157}}
 .course-descriptive { display: block; height: 0; overflow: hidden; }
