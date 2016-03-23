@@ -10,42 +10,13 @@
 	 * Custom data for class list
 	 */
 	var debug = {
-		on:((/(local|byuonline)/i).test(location.hostname.toString())),
+		on:((/(local|byuonline|127.0.0.1)/i).test(location.hostname.toString())),
 		log:function(){
 			if(this.on && console){
 				console.log.apply(console, arguments);
 			}
 		}
 	};
-	var classes = [
-		{'short-title':"EXSC 221", 'title': "Exercise Science"},
-        {'short-title':"ELED 203", 'title': "Foundations of Multicultural Education"},
-		{'short-title':"COMMS 300", 'title': "Media Ethics, Law, and Responsibility"},
-		{'short-title':"HLTH 335", 'title':"Health Behavior Change"},
-		{'short-title':"HCOLL 399R", 'title':"Academic Internship"},
-		{'short-title':"IHUM 202", 'title':"Western Humanities"},
-		{'short-title':"M COM 320", 'title':"Communication in Organization Settings"},
-		{'short-title':"MUSIC 201", 'title':"Civilization: Music 1"},
-		{'short-title':"MUSIC 202", 'title':"Civilization: Music 2"},
-		{'short-title':"NDFS 100", 'title':"Essentials of Nutrition"},
-		{'short-title':"PDBIO 210", 'title':"Human Anantomy"},
-		{'short-title':"PHSCS 127", 'title':"Descriptive Astronomy"},
-		{'short-title':"PSYCH 111", 'title':"General Psychology"},
-		{'short-title':"REL A 212", 'title':"The New Testament"},
-		{'short-title':"REL C 324", 'title':"The Doctrine and Covenants"},
-		{'short-title':"REL C 333", 'title':"The Living Prophets"},
-		{'short-title':"SFL 160", 'title':"Introduction to Family Processes"},
-		{'short-title':"SFL 260", 'title':"Family Finance"},
-		{'short-title':"SOC 111", 'title':"Introductory Sociology"}
-		/*,
-		{'short-title':"STDEV 150", 'title':"Public Speaking"}
-		*/
-	];
-	for(var i=0;i<classes.length;i++) {
-		//var title = classes[i]['short-title']+": "+classes[i]['title'];
-		//$("#combobox").append($('<option value="'+title+'">'+title+'</option>'));
-	}
-	
 	
 	
 	$.widget( "custom.combobox", {
@@ -212,12 +183,12 @@
 								}
 							}
 						});
-						if(Object.keys(classesFound).indexOf($(el).text().trim().split(/[\r\n]+/mg)[0]) == -1) {
+						if(Object.keys(classesFound).indexOf($(el).text().trim().split(/[\r\n]+/mg)[0]) == -1) {      // Trying to find the options that are missing.
 							debug.log("Failed to find matching option for:",objKey);
 							var newOption = $("<option>");
-							var titleMatchRegEx = /^(\S{3,})\s+(\d{3,}r?)\s+?(Sec(?:tion)?\s+\d+)?\s*([^\(\r\n]+)(?:\(([^\)]+)\))?(?:[\s\r\n\t]+Info$)?/im;
+							var titleMatchRegEx = /^(\S{3,})\s+(\d{3,}\w?)\s+?(Sec(?:tion)?\s+\d+)?\s*([^\(\r\n]+)(?:\(([^\)]+)\))?(?:[\s\r\n\t]+Info$)?/im;
 							var newOptionText = $(el).text().trim().replace(titleMatchRegEx,"$1 $2: $4").trim();
-							//debug.log($(el).text().trim().match());
+							//debug.log($(el).text().trim());
 							var newOptionSelector = "#"+newOptionText.trim().replace(/\W/ig,"-").replace(/-{2,}/g,"-");
 							if(coursePage.find(newOptionSelector).length > 0) {
 								newOption.html(newOptionText);
@@ -227,16 +198,17 @@
 							} else {
 								var patternMatched = titleMatchRegEx.exec($(el).text().trim());
 								var probableMatches = [];
-								var probableError = "Text in course title doens't match id in classes data.";
+								var probableError = "Text in course title doesn't match id in classes data.";
 								patternMatched.shift();
 								delete patternMatched.index;
 								delete patternMatched.input;
-								coursePage.find(".course-data").each(function(i,el){
-									if(foundTitle.test($(el).attr("id"))) {
-										probableMatches.push($(el).attr("id"));
+								coursePage.find(".course-data").each(function(i,liel){
+									if(foundTitle.test($(liel).attr("id"))) {
+										probableMatches.push($(liel).attr("id"));
 									}
-									if((/[^\w-]/).test($(el).attr("id"))) {
+									if((/[^\w-]/).test($(liel).attr("id"))) {
 										probableError = "The id in classes data is malformed, it contains invalid characters!";
+                                        //debug.log($(liel));
 										//$.error($(el).attr("id")+"; "+probableError);
 									}
 								});
