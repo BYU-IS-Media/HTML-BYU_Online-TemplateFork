@@ -4,21 +4,21 @@
 	/*padding:1.5rem 0;*/
 }
 
-form h2 {
+#form-container h2 {
 	margin-top: 16px;
 }
 
-form > div {
+#form-container > div {
 	width:172px;
 	margin:4px 0;
 	margin-right:16px;
 	display:inline-block;
 }
-.feedback-section form input,.feedback-section form textarea {
+.feedback-section input,.feedback-section textarea {
 	width:100%;
 	border: 1px solid #151c46;
 }
-.feedback-section form input,.feedback-section form button,.feedback-section form textarea {
+.feedback-section input,.feedback-section button,.feedback-section textarea {
 	padding: 0.5em;
 }
 

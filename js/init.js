@@ -25,7 +25,7 @@
         window.pageSettings.jQueryUIVersion = "1.11.3";
     }
     if (typeof window.pageSettings.additionalScripts == "undefined") {
-        window.pageSettings.additionalScripts = [];
+        window.pageSettings.additionalScripts = ['js/feedback_form.js'];
     }
     // Load scripts
     Modernizr.load([ // Load jQuery first. If it doesn't make it from our location, get it from Google.

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>		<html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>		<html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+	<!-- <![endif]-->
+	<head>
+		<title>BYU Online - Classes</title>
+	</head>
+	<body>
+	   <div id="comparisonBox"> 
+            <style>
+                .ct0 {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                .ct0, .ct1, .ct2, .ct3 { 
+                    width: 14.5em;
+                    height: 600px;
+                    background-color: lightgrey;
+                }
+                li {
+                    padding: 5px;
+                    list-style-type: none;                    
+                }
+                input {
+                    display: none;
+                }
+                .ct1, .ct2, .ct3 {
+                    display: none;
+                    vertical-align: top;
+                }
+                                
+                #comparisonBox > input#IndependentStudy:checked ~  .ct1 {
+                    display: inline-block;
+                }
+                #comparisonBox > input#BYUOnline:checked ~ .ct2 {
+                    display: inline-block;
+                }
+                #comparisonBox > input#IndependentStudySemester:checked ~ .ct3 {
+                    display: inline-block;
+                }
+                
+                #selectors {
+                    background-color: orange;
+                    padding: 10px;
+                    width: 300px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+                label {
+                    background-color: orange;
+                    padding: 10px;
+                    width: 300px;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    display: block;
+                    
+                    
+                }
+                label:hover {
+                    background-color: grey;
+                }
+                
+            </style>
+            
+        
+            <label for="IndependentStudy"><span>Independent Study</span></label>
+            <input type=checkbox id="IndependentStudy" name="group">
+            
+            <label for="BYUOnline"><span>BYU Online</span></label>
+            <input type=checkbox id="BYUOnline" name="group">   
+            
+            <label for="IndependentStudySemester"><span>Independent Study Semester</span></label>
+            <input type=checkbox id="IndependentStudySemester" name="group">
+        
+<!--
+            <div id="selectors" class="IS">Independent Study</div>
+            <div id="selectors" class="BYUO">BYU Online</div> 
+            <div id="selectors" class="ISSem">Independent Study Semester</div>
+-->                
+              
+                <div class="ct0">
+                    <h5>Attribute</h5>
+                    <ol class="columnlist">
+                        <li>Cost for matriculated BYU students</li>
+                        <li>Cost for non-BYU students</li>
+                        <li>Duration for matriculated BYU students</li>
+                        <li>Duration for non-BYU students</li>
+                        <li>Instructor/TA interaction</li>
+                        <li>Faculty authoring compensation</li>
+                        <li>Course pacing</li>
+                        <li>Exams</li>
+                        <li>Faculty instructor compensation</li>
+                    </ol>
+                </div>
+                <div class="ct1">
+                    <h5>Independent Study</h5>
+                    <ol class="columnlist">
+                        <li>Standard ($534 for 3 credit hours)</li>
+                        <li>Standard ($534 for 3 credit hours)</li>
+                        <li>N/A</li>
+                        <li>1 year, plus a 3-month extension</li>
+                        <li>Whatever is designed for the course</li>
+                        <li>Contracted author honorarium</li>
+                        <li>Students may work at their own pace; no hard deadlines for assignments</li>
+                        <li>Proctored</li>
+                        <li>Course support and grading stipends, if applicable</li>
+                    </ol>
+                </div>
+                <div class="ct2">
+                    <h5>BYU Online</h5>
+                    <ol class="columnlist">
+                        <li>Included in on-campus tuition</li>
+                        <li>N/A</li>
+                        <li>1 semester (follows BYU’s regular academic calendar)</li>
+                        <li>N/A</li>
+                        <li>Whatever is designed for the course</li>
+                        <li>Authoring takes place as part of faculty load and generally takes one semester</li>
+                        <li>Fixed deadlines within the semester</li>
+                        <li>Proctored</li>
+                        <li>On load</li>
+                    </ol>
+                </div>
+                <div class="ct3">
+                    <h5>Independent Study Semester</h5>
+                    <ol class="columnlist">
+                        <li>Standard ($534 for 3 credit hours)</li>
+                        <li>N/A</li>
+                        <li>1 semester (follows BYU’s regular academic calendar)</li>
+                        <li>N/A</li>
+                        <li>Whatever is designed for the course</li>
+                        <li>Contracted author honorarium</li>
+                        <li>Students may work at their own pace; no hard deadlines for assignments</li>
+                        <li>Proctored</li>
+                        <li>Course support and grading stipends, if applicable</li>
+                    </ol>
+                </div>
+            </div>    
+                
+               
+        
+        <div id="form-container" class="feedback-section" role="contentinfo">
+				<form id="feedback-form">
+					<h2>We want your feedback!</h2>
+					<h4>Can't find the course you need?<br/>Please tell us which course you wanted, but didn't find here.</h4>
+					<label for="request">Class
+						<textarea id="request" name="request" placeholder="Rhetoric & Civilization 2, ENGL 212 or something that fills my Civ 1 requirement"></textarea></label><label for="person">Name
+						<input type="text" name="person" id="person" placeholder="Jane Doe" /></label><label for="contact_info">Email Address
+						<input type="text" id="contact_info"  name="contact_info" placeholder="janedoe@byu.edu" />
+						<input type="hidden" id="form-id" name="form" value="BYU Online Course Request">
+						<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="false">
+					</label>
+					<button id="submit">Submit</button>
+					<div id="submit-message"></div>
+					<div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>
+				</form>
+			</div>
+        
+		
+	</body>
+</html>

@@ -173,35 +173,41 @@
 				</div>
 			</div> -->
              <script>
-				function postContactToGoogle() {
+				var submitButtonEventHandler = function( e ) {
 					var request = $('#request').val();
 					var person = $('#person').val();
 					var contact_info = $('#contact_info').val();
-
-				$.ajax({
-					url: "https://docs.google.com/forms/d/15dgQ5_8Gm4L-YS_yOMkNAauKzxM-8V-hdNZetq5MSZU/formResponse",
-					data: { "entry_878103102": request,
-					"entry_2024783072": person, "entry_1193629600": contact_info },
-					type: "POST",
-					dataType: "xml",
-					
-					});
-				}
+                    $.ajax({
+                        url: "https://docs.google.com/forms/d/15dgQ5_8Gm4L-YS_yOMkNAauKzxM-8V-hdNZetq5MSZU/formResponse",
+                        type: "POST",
+                        dataType: "xml",
+                        data: {
+                            "entry_878103102": request,
+                            "entry_2024783072": person,
+                            "entry_1193629600": contact_info
+                        },
+                        success: function( data, textStatus, jqXHR ) {
+                            console.log("submitButtonHandler",data);
+                        }
+                    });
+                };
+                $(document).ready(function(){
+                    console.log("Document reported as 'ready'!");
+                    $("#submit").on("click,keypress,focus",submitButtonEventHandler);
+                });
             </script>
                 <div id="form-container" class="feedback-section" role="contentinfo">
-                    <form id="feedback-form">
-                        <h2>We want your feedback!</h2>
-                        <h4>Can't find the course you need?<br/>Please tell us which course you wanted, but didn't find here.</h4>
-                        <label for="request">Class
-                            <textarea id="request" name="request" placeholder="Rhetoric & Civilization 2, ENGL 212 or something that fills my Civ 1 requirement"></textarea>
-                        </label>
-                            <label for="person">Name<input type="text" name="person" id="person" placeholder="Jane Doe" /></label>
-                        <label for="contact_info">Email Address
-                            <input type="text" id="contact_info"  name="contact_info" placeholder="janedoe@byu.edu" />
-                        </label>
-                        <button id="submit" onclick="postContactToGoogle()">Submit</button>
-                        <div id="submit-message"></div>
-                    </form>
+                    <h2>We want your feedback!</h2>
+                    <h4>Can't find the course you need?<br/>Please tell us which course you wanted, but didn't find here.</h4>
+                    <label for="request">Class
+                        <textarea id="request" name="request" placeholder="Rhetoric & Civilization 2, ENGL 212 or something that fills my Civ 1 requirement"></textarea>
+                    </label>
+                        <label for="person">Name<input type="text" name="person" id="person" placeholder="Jane Doe" /></label>
+                    <label for="contact_info">Email Address
+                        <input type="text" id="contact_info"  name="contact_info" placeholder="janedoe@byu.edu" />
+                    </label>
+                    <button id="submit">Submit</button>
+                    <div id="submit-message"></div>
                 </div>
             </section>
 		<section class="nav-container">

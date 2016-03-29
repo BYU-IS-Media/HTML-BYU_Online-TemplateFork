@@ -71,3 +71,27 @@
 	});
 })(jQuery);
 */
+
+
+$(document).ready(function(){
+    var submitButtonEventHandler = function( e ) {
+        var request = $('#request').val();
+        var person = $('#person').val();
+        var contact_info = $('#contact_info').val();
+        $.ajax({
+            url: "https://docs.google.com/forms/d/15dgQ5_8Gm4L-YS_yOMkNAauKzxM-8V-hdNZetq5MSZU/formResponse",
+            type: "POST",
+            dataType: "xml",
+            data: {
+                "entry.878103102": request,
+                "entry.2024783072": person,
+                "entry.1193629600": contact_info
+            },
+            complete: function( jqXHR, textStatus ) {
+                //console.log("submitButtonHandler",data);
+                $("#submit-message").html("<h3>Thank you!</h3><p>Your information has been saved. Thank you for your time.</p>");
+            }
+        });
+    };
+    $("#submit").on("click",submitButtonEventHandler);
+});
