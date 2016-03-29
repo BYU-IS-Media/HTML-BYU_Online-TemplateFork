@@ -66,7 +66,7 @@
 					<h2><a href="http://www.byu.edu/" class="byu">Brigham Young University</a></h2>
 				</div>
 				<!-- This should link to your organization's home page-->
-				<h1><a id="site-name" href="index.html" title="BYU Semester Online">BYU Online</a></h1><!---	<a href="http://home.byu.edu/home/cas" class="sign-in button">Sign in</a>	--->
+				<h1><a id="site-name" href="index.html" title="BYU Semester Online">BYU Online</a></h1><!--	<a href="http://home.byu.edu/home/cas" class="sign-in button">Sign in</a>	-->
 			</div>
 		</header>
 		<section id="search-menu">
@@ -93,22 +93,6 @@
 						 	</ul>
 						</div>
 					</li>
-					<!---
-					<li>
-						<div class="feature-image"><img src="" data-src="images/slider/feature-main.jpg" alt="Featured image 2"></div>
-						<div data-background="#339947" data-shadow="#006614" class="feature-description lightText">
-							<h2><a href="#">Slider Feature 2</a></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						</div>
-					</li>
-					<li>
-						<div class="feature-image"><img src="" data-src="images/slider/feature-main-3.jpg" alt="Featured image 3"></div>
-						<div data-background="#444" data-shadow="#111" class="feature-description lightText">
-							<h2><a href="#">Slider Feature 3</a></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						</div>
-					</li>
-					--->
 				</ul>
 			</div>
 			<div id="topic-search">
@@ -187,24 +171,39 @@
 						<div class="calendar-item">PHSCS 127<span class="time">3:00-3:50 PM</span>MARB 127</div>
 					</div>
 				</div>
-			</div> --> 
-			<div id="form-container" class="feedback-section" role="contentinfo">
-				<form id="feedback-form">
-					<h2>We want your feedback!</h2>
-					<h4>Can't find the course you need?<br/>Please tell us which course you wanted, but didn't find here.</h4>
-					<label for="request">Class
-						<textarea id="request" name="request" placeholder="Rhetoric & Civilization 2, ENGL 212 or something that fills my Civ 1 requirement"></textarea></label><label for="person">Name
-						<input type="text" name="person" id="person" placeholder="Jane Doe" /></label><label for="contact_info">Email Address
-						<input type="text" id="contact_info"  name="contact_info" placeholder="janedoe@byu.edu" />
-						<input type="hidden" id="form-id" name="form" value="BYU Online Course Request">
-						<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="false">
-					</label>
-					<button id="submit">Submit</button>
-					<div id="submit-message"></div>
-					<div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>
-				</form>
-			</div>
-		</section>
+			</div> -->
+             <script>
+				function postContactToGoogle() {
+					var request = $('#request').val();
+					var person = $('#person').val();
+					var contact_info = $('#contact_info').val();
+
+				$.ajax({
+					url: "https://docs.google.com/forms/d/15dgQ5_8Gm4L-YS_yOMkNAauKzxM-8V-hdNZetq5MSZU/formResponse",
+					data: { "entry_878103102": request,
+					"entry_2024783072": person, "entry_1193629600": contact_info },
+					type: "POST",
+					dataType: "xml",
+					
+					});
+				}
+            </script>
+                <div id="form-container" class="feedback-section" role="contentinfo">
+                    <form id="feedback-form">
+                        <h2>We want your feedback!</h2>
+                        <h4>Can't find the course you need?<br/>Please tell us which course you wanted, but didn't find here.</h4>
+                        <label for="request">Class
+                            <textarea id="request" name="request" placeholder="Rhetoric & Civilization 2, ENGL 212 or something that fills my Civ 1 requirement"></textarea>
+                        </label>
+                            <label for="person">Name<input type="text" name="person" id="person" placeholder="Jane Doe" /></label>
+                        <label for="contact_info">Email Address
+                            <input type="text" id="contact_info"  name="contact_info" placeholder="janedoe@byu.edu" />
+                        </label>
+                        <button id="submit" onclick="postContactToGoogle()">Submit</button>
+                        <div id="submit-message"></div>
+                    </form>
+                </div>
+            </section>
 		<section class="nav-container">
 			<!-- Primary Nav-->
 			<nav id="primary-nav" role="navigation">
@@ -216,7 +215,7 @@
 					<li><a href="http://byuonline.brainhoney.com" class="single">BrainHoney</a></li>
 				</ul>
 			</nav>
-			<!-- Secondary Nav-- >
+			<!-- Secondary Nav - - >
 			<nav id="secondary-nav" role="navigation">
 				<ul>
 					<li><a href="#">SecMenu1</a>

@@ -1,6 +1,7 @@
 /**
  * Collects and submits data from the page (feedback form?)
  */
+/*
 (function($){
 	var submitFeedbackForm = function( e ) {
 		e.preventDefault();
@@ -69,3 +70,4 @@
 		$("#feedback-form #submit").on("click",submitFeedbackForm);
 	});
 })(jQuery);
+*/
