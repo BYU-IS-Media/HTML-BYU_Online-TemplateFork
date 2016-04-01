@@ -60,9 +60,9 @@
 
 @media screen and (min-width: 1146px) {
 	.feedback-section {
-		margin-left: calc((-100vw + 939.72px)/2);
-		margin-right: calc((-100vw + 939.72px)/2);
-		padding:1.5em 103.14px;
+		margin-left:  calc((939.72px - 100vw)/2);
+		margin-right: calc((939.72px - 100vw)/2);
+		padding:1.5em calc((100vw - 939.72px)/2);
 	}
 	.feedback-section > * {
 		width: 939.72px;

@@ -165,7 +165,7 @@
 				var classesFound = {};
 				$(classList).find(".course-title").each( function( i,el ) {
 					//debug.log($(el).text().trim());
-					var foundTitle = $(el).text().trim().match(/^\S{3,}\s+\S{3,}/m);
+					var foundTitle = $(el).text().trim().match(/^(\S{3,}|\S{3,} \S+)\s+\S{3,}/m);
 					var objKey = $(el).text().trim().split(/[\r\n]+/mg)[0];
 					if(foundTitle) {
 						foundTitle = new RegExp(foundTitle[0].replace(/\W/g,"."),"i");
@@ -186,7 +186,7 @@
 						if(Object.keys(classesFound).indexOf($(el).text().trim().split(/[\r\n]+/mg)[0]) == -1) {      // Trying to find the options that are missing.
 							debug.log("Failed to find matching option for:",objKey);
 							var newOption = $("<option>");
-							var titleMatchRegEx = /^(\S{3,})\s+(\d{3,}\w?)\s+?(Sec(?:tion)?\s+\d+)?\s*([^\(\r\n]+)(?:\(([^\)]+)\))?(?:[\s\r\n\t]+Info$)?/im;
+							var titleMatchRegEx = /^(\S{3,}|\S{3,} \S+)\s+(\d{3,}\w?)\s*?(Sec(?:tion)?\s+\d+)?\s*([^\(\r\n]+)(?:\(([^\)]+)\))?(?:[\s\r\n\t]+Info$)?/im;
 							var newOptionText = $(el).text().trim().replace(titleMatchRegEx,"$1 $2: $4").trim();
 							//debug.log($(el).text().trim());
 							var newOptionSelector = "#"+newOptionText.trim().replace(/\W/ig,"-").replace(/-{2,}/g,"-");
