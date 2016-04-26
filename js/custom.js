@@ -32,6 +32,12 @@
 
 (function($, undefined){
 	$(document).ready(function(){
+		//	Step 1) Store the descriptive data on the course-data element to save on rendering time (performance)
+		$(".course-data").each(function( i, el ) {
+			$(el).data("course-data-descriptive",$(el).find(".course-descriptive").html());
+		});
+		//	Step 2) Remove the descriptive data that isn't shown anyway - it will be shown on "info click"
+		$(".course-descriptive").empty();
 		$("a.info-link").on("click",function( e ) {
 			var $this = $(this),
 				$parent = $this.parent().parent(),
@@ -41,8 +47,14 @@
 			if($info.hasClass("selected")) {
 				$info.removeAttr("style");
 				$info.removeClass("selected");
+				//	Delay the empty() so that it doesn't disappear until it is hidden from view.
+				window.setTimeout("$('#"+$parent.attr("id")+"').find('.course-descriptive').empty()",525);
 			} else {
+				//	Replace the data first so the below height calculations have something to measure...
+				$parent.find(".course-descriptive").html($parent.data("course-data-descriptive"));
+				//	Measure the height for animation awesome.
 				$info.setAnimationHeight($info);
+				//	Set the height, because you can't "tween" from of to an unknown height.
 				var height = $info.attr("data-animation-height");
 				$info.css('height',height+"px");
 				$info.addClass("selected");

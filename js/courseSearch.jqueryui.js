@@ -250,6 +250,18 @@
 				debug.log("Error! No classes found.");
 				$.error("Classes.html failed to resolve.");
 			}
+			//	Get the course "sort code" from the url parameter "course"
+			var key = "course",queryStringCourse = unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+			//	Get the full title from the first match in the select options.
+			if(queryStringCourse.length > 0 &&  $("#combobox option[value^='"+queryStringCourse+"']").length > 0) {
+				var courseTitle = $("#combobox option[value^='"+queryStringCourse+"']").attr("value");
+				//	Set the text input to the matching course title.
+				$(".custom-combobox input").val(courseTitle);
+				//	Set the selected option to that same course.
+				$("#combobox").val($("#combobox option[value^='"+queryStringCourse+"']").attr("value"));
+				//	Call the select handler for the combobox.
+				$("#combobox").combobox('option','select').call($("#combobox"));
+			}
 		}).fail(function( jqXHR, textStatus, errorThrown ){
 			debug.log("Classes.html failed with this message: ",errorThrown);
 		});
@@ -276,6 +288,7 @@
 			}
 		});
 		$("#combobox-label").remove();
+		
 	});
 })( jQuery );
 
