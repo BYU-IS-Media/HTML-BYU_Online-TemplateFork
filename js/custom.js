@@ -52,6 +52,10 @@
 			} else {
 				//	Replace the data first so the below height calculations have something to measure...
 				$parent.find(".course-descriptive").html($parent.data("course-data-descriptive"));
+				var iframe = $parent.find(".course-descriptive").find("iframe");
+				iframe.each(function(i,el){
+					$(el).attr("src",$(el).attr("src"))
+				});
 				//	Measure the height for animation awesome.
 				$info.setAnimationHeight($info);
 				//	Set the height, because you can't "tween" from of to an unknown height.
