@@ -9,7 +9,7 @@
 		<meta charset="UTF-8">
 		<meta name="robots" content="noindex">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>BYU Online - Classes</title>
+		<title>BYU Online - Auto</title>
 		<meta name="description" content="Description about your department.">
 		<meta name="author" content="Brigham Young University Online" />
 		<meta name="keywords" content="keyword 1, keyword 2, keyword 3">
@@ -73,19 +73,19 @@
 	            var TAname = $('#TAname').val();
 	            var TAemail = $('#TAemail').val();
 				
+	            //Making sure that variables are received
+	            console.log("declared variables:");
+	            console.log("course id: " + courseID);
+	            console.log("courseTitle: " + courseTitle);
+	            console.log("courseDescription: " + courseDescription);
+	            console.log("professorName: "+professorName);
+	            console.log("professorEmail: "+professorEmail);
+	            console.log("TAcount: "+ TAcount);
+	            console.log("TAname: " + TAname);
+	            console.log("TAemail: " + TAemail);
 	            
 	            
-	            console.log('declared variables:');
-	            console.log(courseID);
-	            console.log(courseTitle);
-	            console.log(courseDescription);
-	            console.log(professorName);
-	            console.log(professorEmail);
-	            console.log(TAcount);
-	            console.log(TAname);
-	            console.log(TAemail);
-	            
-	            /* document.getElementById("output").innerHTML = ; */
+	            document.getElementById("output").innerHTML = "<pre>  </pre>"
         	};
         	$("#writecode").on("click",codeWriter);
         });   
@@ -93,28 +93,33 @@
         </script> 
         <style>
             input {
-                display: block;
+            	display: block;
+            	
             }
-        
+            
+            #output {
+            	
+            } 
+            
         </style>
 		<div id="content" role="main" class="wrapper clearfix ">
 			<form>
                 Course ID: (e.g. PSYCH 111):
-                <input type="text" name="courseID" id="courseID"><br>
+				<input type="text" name="courseID" id="courseID">
                 Course Title: (e.g. General Psychology):
-                <input type="text" name="courseTitle" id="courseTitle"><br>
+                <input type="text" name="courseTitle" id="courseTitle">
                 Course Description:
-                <input type="text" name="courseDescription" id="courseDescription"><br>
+                <input type="text" name="courseDescription" id="courseDescription">
                 Professor Name:
-                <input type="text" name="professorName" id="professorName"><br>
+                <input type="text" name="professorName" id="professorName">
                 Professor Email:
-                <input type="text" name="professorEmail" id="professorEmail"><br>
+                <input type="text" name="professorEmail" id="professorEmail">
                 Number of TAs:
-                <input type="number" name="TAcount" id="TAcount"><br>
+                <input type="number" name="TAcount" id="TAcount">
                 TA Name:
-                <input type="text" name="TAname" id="TAname"><br>
+                <input type="text" name="TAname" id="TAname">
                 TA Email:
-                <input type="text" name="TAemail" id="TAemail"><br>
+                <input type="text" name="TAemail" id="TAemail">
 			</form>	
             <div class="btn btn-primary" id="writecode">Generate Code</div>
 		</div>
@@ -123,6 +128,30 @@
         <div id="content" class="wrapper clearfix">
             <h4>HTML Output Container</h4>
             <div id="output">
+	            <textarea style="width:864px; height:500px;">
+<li id="STDEV-150-Public-Speaking" class="course-data">
+	<div class="course-title">
+		STDEV 150 Section 018 	Public Speaking
+		<a class="info-link" href="javascript:void(0);">Info</a>
+	</div>
+	<div class="course-descriptive">
+		<!--
+		<div class="course-video-wrapper">
+			<div class="course-video-container">
+				<div class="course-video videoWrapper">
+					<iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		-->
+		<div class="course-description">Principles and methods of public speaking; speaking experiences.<br>
+	    <a href="help_files/Example Syllabi Winter 2016/STDEV-150-015-20155_ Public Speaking EXAMPLE SYLLABUS.pdf">Download Syllabus</a> </div>
+		<div class="instructor-name">Wilkinson, Ron</div>
+		<div class="instructor-email"><a href="mailto:rondwilkinson@gmail.com">rondwilkinson@gmail.com</a></div>
+		<div class="ta-name">No TA for this course.</div>
+	</div>
+</li>
+	            </textarea>
             </div>
         </div>
         
