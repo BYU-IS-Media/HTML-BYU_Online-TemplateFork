@@ -1,0 +1,196 @@
+body {
+	margin: 0;
+	line-height:initial;
+}
+
+.factsheet {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	padding: 0;
+	margin: 0;
+}
+
+/* ************************ WELCOME SECTION ************************ */
+.welcome {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-image: url("../images/tablegirl.jpg");
+	background-size: cover;
+	background-position: right top;
+	height: 650px;
+	background-repeat: no-repeat;
+
+}
+.explanation {
+	padding-top: 210px;
+    padding-right: 0rem;
+    padding-left: 7rem;
+    padding-bottom: 1rem;
+    height: 200px;
+    width: 300px;
+    font-size: 3rem;
+    color: white;
+    /* background-color: rgba(0,0,0,0.45); */
+    line-height: 74px;
+    font-weight: bold;
+}
+.expl-detail {
+	background-color: rgba(0,0,0,0.45);
+    color: white;
+    padding-left: 13rem;
+    padding-right: 55%;
+    line-height: 27px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+/* ************************ SERVICES SECTION ************************ */
+.services {
+	background-color: #5382af;
+	padding: 3rem;
+	background-size: 100%;
+	color: white;
+}
+.service-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0px 0px 45px 0px;
+}
+.service-title {
+	font-size: 1.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    max-width: 45%;
+}
+.service-title > span {
+	line-height: .8;
+	font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.service-title > div {
+	font-size: 3rem;
+}
+.service-description {
+	max-width: 45%;
+	letter-spacing: 0.8px;
+    line-height: 1.7rem;
+    padding-left: 8rem;
+}
+.service-description > span {
+	color: white;
+}
+.bolded {
+	font-weight: bolder;	
+	text-decoration: none;
+}
+.bolded > a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: white;
+}
+.bolded > a:hover {
+	text-decoration: underline;
+}
+.btn-container {
+
+}
+.circle-btn {
+	/*padding: 10px;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.circle-btn > a {
+	/*padding: 5px;*/
+	max-width: 160px;
+	text-decoration: none;
+	color: white;
+}
+.circle-btn > a > button {
+	font-family: helvetica, sans-serif;
+	display: flex;
+    /*margin: 0 auto;*/
+    border: 5px solid white;
+    text-decoration: none;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    justify-content: center;
+    color: white;
+    font-size: 5.5rem;
+    font-weight: bold;
+    background-color:  #63b3ff;
+	transition: background-color .10s ease-in-out, color .10s ease-in-out;
+}
+.circle-btn > a > button:hover {
+	background-color: white;
+	color: #63b3ff;
+	cursor: pointer;
+	border: 5px solid white;
+	
+
+}
+/* ************************ DETAIL SECTION ************************ */
+.detail {
+	background-color: green;
+	/*background-image: url("https://static.pexels.com/photos/162/man-person-apple-iphone.jpg");*/
+	background-image: url("../images/friendsOnline.jpg");
+	background-position: right top;
+	background-size: 100%;
+	padding: 3rem;
+	border-bottom: 5px solid white;
+	height: 100%;
+}
+
+.detail-overlay {
+	background-color: rgba(0,0,0,.5);
+	color: white;
+	/*position: relative;
+	top: 50%;
+	transform: translateY(-50%);*/
+}
+.detail-flex {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 2rem;
+}
+
+.title {
+	padding: 1rem;
+	font-size: 2.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: lighter;
+    display: block;
+    text-transform: uppercase;
+    max-width: 45%;
+}
+.info {
+	padding: 5px;
+	border-left-style: solid;
+	border-color: white;
+	width: 45%;
+}
+
+#dt-1 {
+	background-image: url("../images/womaninblue.jpg");
+}
+#dt-2 {
+	background-image: url("../images/friendsOnline.jpg");
+}
+#dt-3 {
+	background-image: url("../images/tableguy.jpg");
+}
+#dt-4 {
+	background-image: url("../images/appleproducts.jpg");
+}
+#dt-5 {
+	background-image: url("../images/laptopwoman.jpg");
+}

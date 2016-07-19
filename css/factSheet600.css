@@ -1,0 +1,130 @@
+@media screen and (max-width: 600px) {
+	
+	/* ************************ WELCOME SECTION ************************ */
+	.welcome {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-image: url("../images/tablegirl.jpg");
+		background-size: cover;
+		background-position: right bottom;
+		height: 650px;
+		background-repeat: no-repeat;
+
+	}
+	.explanation {
+		padding-left: 5%;
+		padding-right: 0rem;
+		padding-top: 25px;
+		padding-bottom: 0px;
+	    height: 100%;
+	    width: 100%;
+	    font-size: 3rem;
+	    color: white;
+	    background-color: rgba(0,0,0,0.45);
+	    font-weight: bold;
+	}
+	.expl-detail {
+		background-color: rgba(0,0,0,0.45);
+	    color: white;
+	    padding-left: 5%;
+	    padding-right: 5%;
+	    line-height: 27px;
+	    padding-top: 25px;
+	    padding-bottom: 25px;
+
+	}
+	/* ************************ SERVICES SECTION ************************ */
+	.services {
+		background-color: #5382af;
+		padding: 5%;
+		background-size: 100%;
+		color: white;
+	}
+	.service-flex {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0px 0px 45px 0px;
+	}
+	.service-title {
+		font-size: 1.5rem;
+	    font-weight: lighter;
+	    text-transform: uppercase;
+	    max-width: 45%;
+	}
+	.service-title > span {
+		line-height: .8;
+		font-size: 3rem;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	}
+	.service-title > div {
+		font-size: 2rem;
+	}
+	.service-description {
+		max-width: 100%;
+		letter-spacing: 0.8px;
+	    line-height: 1.7rem;
+	    padding-left: 0px;
+	}
+	.service-description > span {
+		color: white;
+	}
+	.bolded {
+		font-weight: bolder;	
+		text-decoration: none;
+	}
+	.bolded > a {
+		text-decoration: none;
+		font-weight: bolder;
+		color: white;
+	}
+	.bolded > a:hover {
+		text-decoration: underline;
+	}
+
+	/* ************************ DETAIL SECTION ************************ */
+	.detail {
+		background-color: green;
+		/*background-image: url("https://static.pexels.com/photos/162/man-person-apple-iphone.jpg");*/
+		background-image: url("../images/friendsOnline.jpg");
+		background-position: right top;
+		background-size: cover;
+		padding: 5%;
+		border-bottom: 5px solid white;
+		height: 100%;
+	}
+
+	.detail-overlay {
+		background-color: rgba(0,0,0,.5);
+		color: white;
+	}
+	.detail-flex {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0rem;
+	}
+
+	.title {
+		padding: 1rem;
+		font-size: 1.7rem;
+		-webkit-margin-before: 0.83em;
+		-webkit-margin-after: 0.83em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		font-weight: lighter;
+		display: block;
+		text-transform: uppercase;
+		max-width: 100%;
+	}
+	.info {
+		padding: 5px;
+		border-left-style: dotted;
+		border-color: rgba(0, 0, 0, 0);
+		width: 100%;
+		font-size: .9rem;
+		line-height: 1.2rem;
+	}
+}

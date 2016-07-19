@@ -1,0 +1,139 @@
+@media screen and (max-width: 1100px) {
+
+	/* ************************ WELCOME SECTION ************************ */
+	.welcome {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-image: url("../images/tablegirl.jpg");
+		background-size: cover;
+		background-position: right top;
+		height: 650px;
+		background-repeat: no-repeat;
+
+	}
+	.explanation {
+		padding-top: 210px;
+	    padding-right: 0rem;
+	    padding-left: 7rem;
+	    padding-bottom: 1rem;
+	    height: 200px;
+	    width: 300px;
+	    font-size: 3rem;
+	    color: white;
+	    /* background-color: rgba(0,0,0,0.45); */
+	    line-height: 74px;
+	    font-weight: bold;
+	}
+	.expl-detail {
+		background-color: rgba(0,0,0,0.45);
+	    color: white;
+	    padding-left: 13rem;
+	    padding-right: 20rem;
+	    line-height: 27px;
+	    padding-top: 25px;
+	    padding-bottom: 25px;
+
+	}
+	/* ************************ SERVICES SECTION ************************ */
+	.services {
+		background-color: #5382af;
+		padding: 3rem;
+		background-size: 100%;
+		color: white;
+	}
+	.service-flex {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0px 0px 45px 0px;
+	}
+	.service-title {
+		font-size: 1.5rem;
+	    font-weight: lighter;
+	    text-transform: uppercase;
+	    max-width: 100%;
+	}
+	.service-title > span {
+		line-height: .8;
+		font-size: 6rem;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	}
+	.service-title > div {
+		font-size: 3rem;
+	}
+	.service-description {
+		max-width: 100%;
+		letter-spacing: 0.8px;
+	    line-height: 1.7rem;
+	    padding-left: 0;
+	}
+	.service-description > span {
+		color: white;
+	}
+	.bolded {
+		font-weight: bolder;	
+		text-decoration: none;
+	}
+	.bolded > a {
+		text-decoration: none;
+		font-weight: bolder;
+		color: white;
+	}
+	.bolded > a:hover {
+		text-decoration: underline;
+	}
+	.circle-btn {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.thing {
+		margin-bottom: 15px;
+	}
+	
+	/* ************************ DETAIL SECTION ************************ */
+	.detail {
+		background-color: green;
+		/*background-image: url("https://static.pexels.com/photos/162/man-person-apple-iphone.jpg");*/
+		background-image: url("../images/friendsOnline.jpg");
+		background-position: right top;
+		background-size: 100%;
+		padding: 3rem;
+		border-bottom: 5px solid white;
+		height: 100%;
+	}
+
+	.detail-overlay {
+		background-color: rgba(0,0,0,.5);
+		color: white;
+	}
+	.detail-flex {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 3rem;
+	}
+
+	.title {
+		padding: 1rem;
+		font-size: 2.5em;
+	    -webkit-margin-before: 0.83em;
+	    -webkit-margin-after: 0.83em;
+	    -webkit-margin-start: 0px;
+	    -webkit-margin-end: 0px;
+	    font-weight: lighter;
+	    display: block;
+	    text-transform: uppercase;
+	    max-width: 45%;
+	}
+	.info {
+		padding: 5px;
+		border-left-style: solid;
+		border-color: white;
+		width: 45%;
+		line-height: 1.7rem;
+	}
+}
