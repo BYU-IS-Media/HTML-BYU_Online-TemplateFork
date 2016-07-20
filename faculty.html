@@ -9,7 +9,7 @@
 		<meta charset="UTF-8">
 		<meta name="robots" content="noindex">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>BYU Online - Classes</title>
+		<title>LoCaLhOsT!</title>
 		<meta name="description" content="Description about your department.">
 		<meta name="author" content="Brigham Young University Online" />
 		<meta name="keywords" content="keyword 1, keyword 2, keyword 3">
@@ -25,12 +25,6 @@
 		<script>
 			var pageSettings = {
 			 jQueryURL:		 "vendor/jquery-1.11.2/jquery-1.11.2.min.js", // Use this default, or load jQuery from somewhere else
-			 jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
-			 loadslider:		true, // Whether the image slider is present on the page
-			 additionalScripts:	 ["vendor/jquery.bxslider/jquery.bxslider.min.js","js/custom.js"], // Array of strings specifying URLs for additional scripts to load
-			 gcse_search:		true, // Use the Google Custom Search Engine for the site's search?
-			 gcse_search_id: '009932716493032633443:hlqjz33kfkc',	// Use this BYU GCSE id, or insert your own
-			 analytics_key:	'UA-2108793-1' // Insert your Google Analytics key
 			}
 			
 			
@@ -49,7 +43,7 @@
 					<h2><a href="http://www.byu.edu/" class="byu">Brigham Young University</a></h2>
 				</div>
 				<!-- This should link to your organization's home page-->
-				<h1><a id="site-name" href="index.html" title="BYU Semester Online">BYU Online</a></h1><!---	<a href="http://home.byu.edu/home/cas" class="sign-in button">Sign in</a>	--->
+				<h1><a id="site-name" href="index.html" title="BYU Semester Online">BYU Online</a></h1><!---	<a href="http://home.byu.edu/home/cas" class="sign-in button">Sign in</a>	-->
 			</div>
 		</header>
 		<div id="search-menu">
@@ -79,10 +73,311 @@
                 }
             </style>
             <iframe class="scroll-gone" src="SlidesFromSandi.html" frameborder="0" scrolling="no"></iframe>
-			<div id="main-heading">
-				<h2>Program Comparisons</h2>
-                
+			
+            <div id="main-heading">
+				<h2>Resources</h2>    
 			</div>
+            <div class="link-boxes-container">
+                <div class="link-box">
+                    <ul>Course Approval Process
+                        <li>Teach an online course</li>
+                        <li>Contact list</li>
+                    </ul>
+                </div>
+                <div class="link-box">
+                    
+                </div>
+                <div class="link-box"></div>
+                <div class="link-box"></div>
+            </div>
+<style>
+    .exam-info {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .exam-info > li {
+        padding: 5px;
+        width: 300px;
+        height: 300px;
+        margin-top: 10px;
+
+        line-height: 20px;
+        color: black;
+        text-align: center;
+        background-color: #c7c6c6;
+    }
+
+    .exam-info > li > p {
+        text-align: left;
+        padding-left: 5px;
+    }
+</style>            
+<ul class="exam-info">
+    <li>
+        <h3>Scheduling Exams:</h3>
+        <p>We are in the process of creating a scheduling tool for professors to schedule their exam dates online.  Until that time the BYU Online Testing Center will work with your instructional designer to get your preferred exam dates for each new semester. If there is a conflict in exam deadlines you will be contacted directly to work out an acceptable time. </p>
+    </li>
+    <li>
+        <h3>Deadline Extensions:</h3>
+        <p>To request a change in the exam deadline for a specific student or for an entire section please contact Michelle Smith with the student/section information, exam information, and new deadlines to Michelle Smith at: <a href="mailto:michelle.l.smith@byu.edu">michelle.l.smith@byu.edu</a>.</p>
+    </li>
+    <li>
+        <h3>BYU Online Testing Center Policies:</h3>
+        <p>If your exam is "open-book" or "open-note" the Morris Testing Center will only allow students to use paper versions of notes unless you indicate otherwise. If you have questions or would like to allow students electronic access to notes please contact Michelle Smith at: <a href="mailto:michelle.l.smith@byu.edu">michelle.l.smith@byu.edu</a>.</p> 
+    </li>
+    <li>
+        <h3>Additional Questions:</h3>
+        <p>All questions or concerns regarding BYU Online exam proctoring should be directed to Michelle Smith at: <a href="mailto:michelle.l.smith@byu.edu">michelle.l.smith@byu.edu</a>.</p>
+    </li>
+</ul>
+
+<style>
+    .faculty-info {
+        padding: 20px 0px;
+        margin: 0;
+        list-style: none;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .faculty-info > li {
+        padding-left: 15px;
+        width: 350px;
+        height: 100px;
+        margin-top: 10px;
+
+        line-height: 20px;
+        color: white;
+        text-align: left;
+        background-color: #5382af;
+        transition: background-color .25s ease-in-out, color .25s ease-in-out;
+    }
+    .faculty-info li a p {
+       color: #c3c3c3;
+       //padding-left: 5px;
+    }
+    .faculty-info li:hover{
+        background-color: #71a1d0;
+        cursor: pointer;
+    }
+    .faculty-info li a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    var currentHost = window.location.host;
+    if (currentHost != "byuonline.ce.byu.edu") {
+        $("#f2").attr("href", "https://byuonline.byu.edu/faculty2");
+        $("#f3").attr("href", "https://byuonline.byu.edu/faculty3");
+        $("#f4").attr("href", "https://byuonline.byu.edu/faculty4");
+        $("#f5").attr("href", "https://byuonline.byu.edu/faculty5");
+    }
+});
+
+</script>            
+<ul class="faculty-info">
+    <li>
+        <a href="https://byuonline.ce.byu.edu/faculty2" id="f2">
+            <h5>Course Approval Process:</h5>
+            <p>Transitioning from the classroom to the browser</p>
+        </a>
+    </li>
+    <li>
+        <a href="https://byuonline.ce.byu.edu/faculty3" id="f3">
+            <h5>Course Development Timeline:</h5>
+            <p>Important production dates and deadlines</p>
+        </a>
+    </li>
+    <li>
+        <a href="https://byuonline.ce.byu.edu/faculty4" id="f4">
+            <h5>Sample Course Outline:</h5>
+            <p>Preparing course content to be effectively taught online</p> 
+        </a>
+    </li>
+    <li>
+        <a href="https://byuonline.ce.byu.edu/faculty5" id="f5">
+            <h5>Testing:</h5>
+            <p>How tests work with online courses</p>
+        </a>
+    </li>
+</ul>
+
+<style>
+    .box { /* Centers the blue box */
+        display: flex;
+
+    }
+    /*Container for the content of the blue box*/
+    .intro-flex { 
+        display: flex;
+        background-color: #5382af;
+        margin: 0 auto;
+    }
+    /*each item in the blue box*/
+    .item { 
+        align-self: center;
+        margin: 5px;
+        color: white;
+    }
+    /*Font styling*/
+    .item p {
+        color: #c3c3c3;
+    }
+    .item p a {
+        color: white;
+    }
+    /*Image styling*/
+    .item > img {
+        border-radius: 50% ;
+        margin: 5px;
+        height: auto;
+        width: auto;
+        max-height: 120px;
+        max-width: 120px;
+    }
+    
+</style>
+<div class="box">
+    <div class="intro-flex">
+        <div class="item">
+            <img src="images/directory/PabloRiboldi.jpg">
+        </div>
+        <div class="item">
+            <h5>Hi, I'm Pablo.</h5>
+            <p>Assistant Director of Instructional Design</p>
+            <p><a href="mailto:mailto:pablo.riboldi@byu.edu?Subject=BYU%20Online%20|%20Course%20Development%20Question" target="_top">Contact me</a> with any questions you have about the course development process!</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>           
+<script>
+    $(document).ready(function(){   
+        $("section.tiles > div").click(function(){
+            var self = $(this).context; 
+            var thing = $("section.tiles > div");
+            var n = 1;                                          //the number of the carre
+            for (var count = 0; count <= $("section.tiles > div").length; count++) {
+                thing = $("section.tiles > div")[count];        //accesses the content array and sets content to value of counter
+                if (self == thing) {                            //If content matches the clicked element
+                    n = count;                                  //set n to be the content
+                };    
+            }
+            $("div.carre" + n + " > div").toggle();             //Tells what content to display
+        })
+    });
+</script>
+<style>
+    .tiles > div {
+        width: 100%;
+        height: 50px;
+        background-color: #d2d2d2;
+        display: inline-table;
+        border-bottom: solid 1px black;
+    }
+    .tileContent {
+        width: 100%;
+        background-color: #628cb;6
+        color: white;   
+        display: absolute;
+    }
+    .tiles {  
+        display: flex;
+        flex-direction: column;
+    }
+    .tiles > div:hover {
+        background-color: #88A95B;
+    }
+</style>
+<section class="tiles">
+            
+    <div class="carre0">Course Approval Process
+        <div class="tileContent" style="display:none;">
+            <p>Tail short ribs doner cupim pig alcatra ham hock meatball. Pancetta pork belly alcatra ribeye. Leberkas drumstick shoulder, porchetta flank tongue capicola jerky frankfurter short loin sirloin cupim ball tip cow. Pork loin shankle pork chop meatball pig biltong landjaeger turducken capicola kevin beef ribs tongue, ham meatloaf ribeye. Rump biltong meatball hamburger jerky prosciutto fatback venison doner jowl. Cow strip steak jowl t-bone beef ribs.</p>
+            <p>Tail short ribs doner cupim pig alcatra ham hock meatball. Pancetta pork belly alcatra ribeye. Leberkas drumstick shoulder, porchetta flank tongue capicola jerky frankfurter short loin sirloin cupim ball tip cow. Pork loin shankle pork chop meatball pig biltong landjaeger turducken capicola kevin beef ribs tongue, ham meatloaf ribeye. Rump biltong meatball hamburger jerky prosciutto fatback venison doner jowl. Cow strip steak jowl t-bone beef ribs.</p>
+            <p>Tail short ribs doner cupim pig alcatra ham hock meatball. Pancetta pork belly alcatra ribeye. Leberkas drumstick shoulder, porchetta flank tongue capicola jerky frankfurter short loin sirloin cupim ball tip cow. Pork loin shankle pork chop meatball pig biltong landjaeger turducken capicola kevin beef ribs tongue, ham meatloaf ribeye. Rump biltong meatball hamburger jerky prosciutto fatback venison doner jowl. Cow strip steak jowl t-bone beef ribs.</p>
+            <p>Tail short ribs doner cupim pig alcatra ham hock meatball. Pancetta pork belly alcatra ribeye. Leberkas drumstick shoulder, porchetta flank tongue capicola jerky frankfurter short loin sirloin cupim ball tip cow. Pork loin shankle pork chop meatball pig biltong landjaeger turducken capicola kevin beef ribs tongue, ham meatloaf ribeye. Rump biltong meatball hamburger jerky prosciutto fatback venison doner jowl. Cow strip steak jowl t-bone beef ribs.</p>
+            <p>This is another small paragraph.</p>
+        </div>
+    </div>
+            
+    <div class="carre1">Course Development Timeline
+        <div class="tileContent" style="display:none;">
+            <p>B This is a paragraph with little content.</p>
+            <p>This is another small paragraph.</p>
+        </div>
+    </div>
+            
+    <div class="carre2">Sample Course Outline
+        <div class="tileContent" style="display:none;">
+            <p>C This is a paragraph with little content.</p>
+            <p>This is another small paragraph.</p>
+        </div>
+    </div>
+            
+    <div class="carre3">Testing
+        <div class="tileContent" style="display:none;">
+            <p>D This is a paragraph with little content.</p>
+            <p>This is another small paragraph.</p>
+        </div>
+    </div>
+            
+    <div class="carre4">Media Site
+        <div class="tileContent" style="display:none;">
+            <p>E This is a paragraph with little content.</p>
+            <p>This is another small paragraph.</p>
+        </div>
+    </div>
+</section> -->
+
+
+</section>
             <!--Style for CSS table -->
             <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
             <table class="pure-table pure-table-bordered">
